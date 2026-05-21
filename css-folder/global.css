@@ -90,6 +90,9 @@ a {
 .site-header {
   background-color: #ffffff;
   border-bottom: 1px solid #e8e4df;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 /* Shiriti i sipërm (Top bar) */
