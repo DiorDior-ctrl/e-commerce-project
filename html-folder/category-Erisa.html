@@ -1,1 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop by Category — Lumière</title>
+  <link rel="stylesheet" href="/css-folder/global.css">
+  <link rel="stylesheet" href="/css-folder/category.css">
+<body>
 
+  <header class="site-header">
+    <div class="header-topbar">
+      Dërgesa falas për porositë mbi 75€ &nbsp;·&nbsp; Përdor kodin WELCOME10
+    </div>
+
+    <div class="container clearfix header-main">
+      <a href="home.html" class="site-logo">
+        Lumi<span>è</span>re
+      </a>
+
+<div class="header-search">
+        <form action="#" method="get" class="clearfix">
+          <input type="text" placeholder="Kërko produkte..." name="q" required>
+          <button type="submit">Kërko</button>
+        </form>
+      </div>
+
+
+      <nav class="header-actions">
+        <a href="profile.html">Llogaria</a>
+        <a href="cart.html">Shporta (3)</a>
+      </nav>
+    </div>
+
+    <nav class="site-nav">
+      <div class="container">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="category.html" class="active">Kategoritë</a></li>
+          <li><a href="about.html">Rreth Nesh</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <h1>Koleksionet Tona</h1>
+      <p>Zbuloni dizajnin e përjetshëm dhe produktet e kuruara me kujdes.</p>
+    </div>
+  </div>
+
+  <main class="container clearfix shop-layout">
+    
+    <aside class="filter-sidebar">
+      <h2 class="filter-sidebar__title">Filtra</h2>
+
+      <div class="filter-group">
+        <span class="filter-group__label">Kategoritë</span>
+        <label class="filter-option"><input type="checkbox" checked> Elektronikë</label>
+        <label class="filter-option"><input type="checkbox" checked> Veshje</label>
+        <label class="filter-option"><input type="checkbox" checked> Këpucë</label>
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-group__label">Gjendja</span>
+        <label class="filter-option"><input type="checkbox" checked> Në Magazinë</label>
+        <label class="filter-option"><input type="checkbox"> Me Porosi</label>
+      </div>
+
+      <button class="btn btn-primary" type="button" style="width: 100%;">Apliko Filtrat</button>
+    </aside>
+
+    <section class="shop-main-content">
+      
+      <div class="shop-toolbar clearfix">
+        <div class="toolbar-results">Duke shfaqur 12 produkte</div>
+        <div class="toolbar-controls">
+          <label for="sort">Rendit:</label>
+          <select id="sort">
+            <option>Të rejat</option>
+            <option>Më të shiturat</option>
+            <option>Çmimi: Ulët-Lart</option>
+          </select>
+        </div>
+      </div>
+
+      <section class="category-section clearfix" id="electronics">
+        <div class="category-section__header">
+          <span class="product-card__category">Kategoria</span>
+          <h2>Elektronikë</h2>
+        </div>
+
+        <article class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Kufje">
+            <span class="product-card__badge">Best Seller</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Elektronikë</span>
+            <h3 class="product-card__name">Kufje Wireless</h3>
+            <p class="product-card__desc">Bateri 40-orëshe me izolim akustik.</p>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">129.99 €</div>
+            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Ore Inteligjente">
+            <span class="product-card__badge badge-new">E Re</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Elektronikë</span>
+            <h3 class="product-card__name">Orë Inteligjente</h3>
+            <p class="product-card__desc">Monitorim shëndeti dhe njoftime inteligjente.</p>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">249.00 €</div>
+            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&q=80" alt="Boks Bluetooth">
+            <span class="product-card__badge badge-sale">-30%</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Elektronikë</span>
+            <h3 class="product-card__name">Boks Portativ</h3>
+            <p class="product-card__desc">Tingull 360° dhe mbrojtje nga uji.</p>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price"><span class="old-price">89.99 €</span> 59.99 €</div>
+            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+          </div>
+        </article>
+      </section>
+
+      <section class="category-section clearfix" id="clothing">
+        <div class="category-section__header">
+          <span class="product-card__category">Kategoria</span>
+          <h2>Veshje</h2>
+        </div>
+
+        <article class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?w=500&q=80" alt="Triko">
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Veshje</span>
+            <h3 class="product-card__name">Triko Leshi</h3>
+            <p class="product-card__desc">100% lesh Merino i butë dhe i ngrohtë.</p>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">95.00 €</div>
+            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80" alt="Xhakete">
+            <span class="product-card__badge badge-new">E Re</span>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Veshje</span>
+            <h3 class="product-card__name">Xhaketë Liri</h3>
+            <p class="product-card__desc">Material i lehtë veror për çdo rast.</p>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">145.00 €</div>
+            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__image-wrapper">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="T-Shirt">
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Veshje</span>
+            <h3 class="product-card__name">T-Shirt Pambuku</h3>
+            <p class="product-card__desc">Pambuk organik, i rehatshëm për përditë.</p>
+          </div>
+          <div class="product-card__footer">
+            <div class="product-card__price">29.00 €</div>
+            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+          </div>
+        </article>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container clearfix">
+      <div class="footer-col">
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #fff; margin-bottom: 15px;">Lumi<span style="color: #c18b53; font-style: italic;">è</span>re</h3>
+        <p style="color: #8a837b; font-size: 14px;">Një koleksion i kuruar objektesh. Projektuar me kujdes dhe elegancë.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bli Tani</h4>
+        <ul>
+          <li><a href="#electronics">Elektronikë</a></li>
+          <li><a href="#clothing">Veshje</a></li>
+          <li><a href="#shoes">Këpucë</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Ndihmë</h4>
+        <ul>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="#">Dërgesat</a></li>
+          <li><a href="#">Kthimet</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Kompania</h4>
+        <ul>
+          <li><a href="about.html">Rreth Nesh</a></li>
+          <li><a href="#">Privatësia</a></li>
+          <li><a href="#">Termat e Shërbimit</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Lumière. Projekt Universitar — Erisa.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

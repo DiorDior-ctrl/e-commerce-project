@@ -1,0 +1,326 @@
+/* ============================================================
+   category.css — Faqja e Produkteve
+   Teknikat Akademike: Box Model, Float, Specificity
+   ============================================================ */
+
+.shop-layout {
+  margin-top: 50px;
+  margin-bottom: 80px;
+}
+
+/* SHIRITI ANËSOR (SIDEBAR) - Floated Majtas */
+.filter-sidebar {
+  float: left;
+  width: 22%;
+  padding-right: 30px;
+}
+
+.filter-sidebar__title {
+  font-size: 24px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e8e4df;
+  color: #1a1a1a;
+}
+
+.filter-group {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #f2efeb;
+}
+
+.filter-group__label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: #1a1a1a;
+}
+
+.filter-option {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #8a837b;
+  cursor: pointer;
+  line-height: 18px;
+}
+
+.filter-option input[type="checkbox"] {
+  margin-right: 8px;
+  vertical-align: middle; 
+}
+
+.filter-option:hover {
+  color: #c18b53;
+}
+
+/* PËRMBAJTJA E PRODUKTEVE - Floated Djathtas */
+.shop-main-content {
+  float: right;
+  width: 78%;
+}
+
+/* TOOLBAR */
+.shop-toolbar {
+  padding-bottom: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e8e4df;
+}
+
+.toolbar-results {
+  float: left;
+  color: #8a837b;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.toolbar-controls {
+  float: right;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.toolbar-controls label {
+  margin-right: 10px;
+  font-weight: 500;
+}
+
+.toolbar-controls select {
+  padding: 8px 15px;
+  border: 1px solid #e8e4df;
+  background-color: #685a5a;
+  font-family: 'Jost', sans-serif;
+  color: #1a1a1a;
+  outline: none;
+  cursor: pointer;
+}
+
+/* KATEGORITË E PRODUKTEVE (Me ndarjen e përmirësuar/Banner) */
+.category-section {
+  clear: both; 
+  margin-bottom: 100px; 
+  padding-top: 60px; 
+  border-top: 1px solid #e8e4df; 
+}
+
+.category-section:first-of-type {
+  border-top: none;
+  padding-top: 10px;
+}
+
+.category-section__header {
+  margin-bottom: 50px;
+  text-align: center;
+  background-color: #ffffff; 
+  padding: 35px 20px;
+  border: 1px solid #f2efeb;
+  border-radius: 12px; 
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.02); 
+}
+
+.category-section__header h2 {
+  font-size: 38px;
+  color: #1a1a1a;
+  margin-top: 8px;
+  letter-spacing: 1px;
+}
+
+.category-section__header .product-card__category {
+  display: block;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #c18b53;
+}
+
+/* KARTAT E PRODUKTEVE */
+.product-card {
+  float: left;
+  width: 31%; 
+  margin-right: 3.5%;
+  margin-bottom: 40px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(26, 26, 26, 0.04);
+  transition: box-shadow 0.3s ease; 
+  overflow: hidden;
+  position: relative; 
+}
+
+/* Logjika e rreshtave */
+.product-card:nth-child(3n) {
+  margin-right: 0;
+}
+
+.product-card:nth-child(3n+1) {
+  clear: left;
+}
+
+.product-card:hover {
+  box-shadow: 0 15px 35px rgba(26, 26, 26, 0.12); 
+}
+
+.product-card__image-wrapper {
+  width: 100%;
+  background-color: #faf9f6;
+  text-align: center;
+  border-bottom: 1px solid #f2efeb;
+}
+
+.product-card__image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-card__badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.product-card__badge.badge-new {
+  background-color: #4a7c59;
+  color: #ffffff;
+}
+
+.product-card__badge.badge-sale {
+  background-color: #9c392c;
+  color: #ffffff;
+}
+
+.product-card__body {
+  padding: 25px 20px 10px 20px;
+  text-align: center;
+}
+
+.product-card__name {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+.product-card__desc {
+  font-size: 14px;
+  color: #8a837b;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.product-card__footer {
+  padding: 0 20px 25px 20px;
+  text-align: center;
+}
+
+.product-card__price {
+  font-size: 22px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.product-card__price .old-price {
+  font-size: 14px;
+  color: #8a837b;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.product-card__footer .btn {
+  display: block;
+  background-color: #faf9f6;
+  color: #1a1a1a;
+  border: 1px solid #e8e4df;
+}
+
+.product-card:hover .product-card__footer .btn {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border-color: #1a1a1a;
+}
+
+
+
+
+
+
+
+/* ============================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ============================================================ */
+
+/* Për Tablet (Nën 1024px) */
+@media (max-width: 1024px) {
+  .filter-sidebar {
+    width: 25%;
+  }
+  .shop-main-content {
+    width: 75%;
+  }
+  
+  /* Bëjmë 2 karta në rresht në vend të 3 */
+  .product-card {
+    width: 48%; 
+    margin-right: 4%;
+  }
+  
+  /* Resetojmë rregullat e vjetra të rreshtave */
+  .product-card:nth-child(3n) { margin-right: 4%; }
+  .product-card:nth-child(3n+1) { clear: none; }
+  
+  /* Aplikojmë rregullat e reja (Çdo kartë e dytë heq margin) */
+  .product-card:nth-child(2n) { margin-right: 0; }
+  .product-card:nth-child(2n+1) { clear: left; }
+}
+
+/* Për Mobile (Nën 768px) */
+@media (max-width: 768px) {
+  .shop-layout {
+    margin-top: 20px;
+  }
+  
+  /* Sidebar dhe Përmbajtja marrin gjerësi të plotë (Njëra nën tjetrën) */
+  .filter-sidebar, 
+  .shop-main-content {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+  
+  .filter-sidebar {
+    margin-bottom: 40px;
+  }
+  
+  .category-section__header {
+    padding: 20px 10px;
+  }
+  
+  .category-section__header h2 {
+    font-size: 28px;
+  }
+  
+  /* Produktet dalin 1 në rresht */
+  .product-card {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
+  
+  /* Sigurohemi që asnjë kartë të mos ketë margin djathtas */
+  .product-card:nth-child(n) { 
+    margin-right: 0; 
+    clear: both;
+  }
+}

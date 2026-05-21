@@ -1,226 +1,349 @@
-/*General css*/
+/* ============================================================
+   global.css — Shared Stylesheet (Strictly Academic)
+   Përmban vetëm elementet globale: Header, Footer, Fonts, Reset
+   Teknikat: Box Model, Float/Clear, Positions (CSS-4)
+   ============================================================ */
 
+/* Importimi i Web Fonts (Lejuar nga leksioni CSS-4) */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap');
+
+/* ============================================================
+   RESET & BAZA (Box Model)
+   ============================================================ */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Jost', sans-serif;
+  background-color: #f8f7f4; /* Ngjyra e sfondit globale */
+  color: #2c2825;
+  line-height: 1.7;
 }
 
-/*NAVBARI*/
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 40px;
-
-    background: linear-gradient(90deg, #141e30, #243b55);
+/* Clearfix - Për menaxhimin e elementeve me Float */
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
-/* LOGO */
-
-.logo h1 {
-    color: white;
+/* Kontejneri Kryesor (Mban përmbajtjen në qendër) */
+.container {
+  width: 90%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-/* NAV LINKS */
-
-.nav-links {
-    display: flex;
-    gap: 25px;
-
-    list-style: none;
+/* ============================================================
+   TIPOGRAFIA GLOBALE
+   ============================================================ */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
+  color: #1c1a18;
 }
 
-.nav-links li a {
-    text-decoration: none;
-    color: white;
-
-    transition: 0.3s;
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Lejuar nga CSS-4: Transitions */
 }
 
-/* PSEUDOCLASS */
-
-.nav-links li a:hover {
-    color: #f0c040;
+/* ============================================================
+   BUTONAT GLOBALE
+   ============================================================ */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px; /* CSS-4: Rounded Corners */
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
-/* SEARCH FORM */
-
-.search-form {
-    display: flex;
-    gap: 10px;
+.btn-primary {
+  background-color: #1c1a18;
+  color: #ffffff;
 }
 
-/* ATTRIBUTE SELECTOR */
-
-input[type="search"] {
-    padding: 10px;
-
-    border: none;
-    border-radius: 8px;
-
-    outline: none;
+.btn-primary:hover {
+  background-color: #36322f;
+  box-shadow: 0 8px 20px rgba(28, 26, 24, 0.2); /* CSS-4: Box Shadow */
 }
 
-.search-form button {
-    padding: 10px 15px;
-
-    border: none;
-    border-radius: 8px;
-
-    background-color: #f0c040;
-
-    cursor: pointer;
-
-    transition: 0.3s;
+.btn-sm {
+  padding: 8px 20px;
+  font-size: 12px;
 }
 
-.search-form button:hover {
-    transform: scale(1.05);
+/* ============================================================
+   HEADER & NAVIGATION
+   ============================================================ */
+.site-header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e8e4df;
 }
 
-/* =========================
-   MAIN
-========================= */
-
-.main-content {
-    padding: 80px 40px;
-    min-height: 70vh;
+/* Shiriti i sipërm (Top bar) */
+.header-topbar {
+  background-color: #1c1a18;
+  color: #ffffff;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-/* =========================
+/* Pjesa kryesore e Header */
+.header-main {
+  padding: 20px 0;
+}
+
+/* Logo */
+.site-logo {
+  float: left;
+  width: 25%;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1c1a18;
+  letter-spacing: -0.5px;
+}
+
+.site-logo span {
+  color: #c18b53;
+  font-style: italic;
+}
+
+/* Shiriti i kërkimit */
+.header-search {
+  float: left;
+  width: 45%;
+  margin-top: 5px;
+}
+
+.header-search input {
+  width: 80%;
+  padding: 10px 15px;
+  background-color: #f1f1f1dc;
+  border: 1px solid #000000c7;
+  border-radius: 20px 0 0 20px;
+  border-right: none;
+  font-family: 'Jost', sans-serif;
+  outline: none;
+}
+
+.header-search button {
+  width: 17%;
+  padding: 12px ;
+  background-color: #f1f1f1dc;
+  border: 1px solid #00000082;
+  border-left: none;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  color: #6c0808;
+}
+
+/* Butonat e llogarisë/shportës */
+.header-actions {
+  float: right;
+  width: 25%;
+  text-align: right;
+  margin-top: 10px;
+}
+
+.header-actions a {
+  margin-left: 25px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #8a837b;
+  font-weight: 500;
+}
+
+.header-actions a:hover {
+  color: #c18b53;
+}
+
+/* Navigimi */
+.site-nav {
+  clear: both; /* Pastron float-et e mësipërme */
+  border-top: 1px solid #f2efeb;
+  text-align: center;
+  padding: 15px 0;
+background-color: #2b2522;
+}
+
+.site-nav ul {
+  list-style-type: none;
+}
+
+.site-nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+.site-nav ul li a {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #aca49a;
+  font-weight: 500;
+  }
+
+.site-nav ul li a:hover,
+.site-nav ul li a.active {
+  color: #ffffff;
+}
+
+/* ============================================================
+   PAGE HERO GLOBALE (Për titujt e faqeve si Rreth Nesh, Kontakt etj)
+   ============================================================ */
+.page-hero {
+  background-color: #ffffff;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 1px solid #f2efeb;
+}
+
+.page-hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  color: #8a837b;
+  font-size: 18px;
+}
+
+/* ============================================================
    FOOTER
-========================= */
-
-.footer {
-    background-color: #111;
-
-    color: white;
-
-    padding: 50px 40px 20px;
+   ============================================================ */
+.site-footer {
+  background-color: #1c1a18;
+  color: #ffffff;
+  padding: 60px 0 20px 0;
+  margin-top: 80px;
+  clear: both;
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-
-    gap: 40px;
-
-    flex-wrap: wrap;
+.footer-col {
+  float: left;
+  width: 25%;
+  padding-right: 30px;
 }
 
-.footer-box {
-    flex: 1;
-    min-width: 220px;
+.footer-col h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 15px;
 }
 
-.footer-box h3 {
-    margin-bottom: 15px;
+.footer-col h3 span {
+  color: #c18b53;
+  font-style: italic;
 }
 
-.footer-box ul {
-    list-style: none;
+.footer-col h4 {
+  font-family: 'Jost', sans-serif;
+  color: #ffffff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
 }
 
-.footer-box ul li {
-    margin-bottom: 10px;
+.footer-col p {
+  color: #8a837b;
+  font-size: 14px;
+  line-height: 1.8;
 }
 
-/* DESCENDANT SELECTOR */
-
-.footer-box ul li a {
-    color: white;
-    text-decoration: none;
+.footer-col ul {
+  list-style-type: none;
 }
 
-.footer-box ul li a:hover {
-    color: #f0c040;
+.footer-col ul li {
+  margin-bottom: 10px;
 }
 
-/* PSEUDOELEMENT */
-
-.copyright::before {
-    content: "© ";
+.footer-col ul li a {
+  color: #8a837b;
+  font-size: 14px;
 }
 
-.copyright {
+.footer-col ul li a:hover {
+  color: #c18b53;
+}
+
+.footer-bottom {
+  clear: both; /* Pastron kolonat e Footer-it */
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 40px;
+  border-top: 1px solid #36322f;
+  font-size: 13px;
+  color: #8a837b;
+}
+
+
+
+
+
+
+
+
+
+
+/* ============================================================
+   RESPONSIVE DESIGN (Media Queries)
+   ============================================================ */
+
+/* Për Tablet (Nën 1024px) */
+@media (max-width: 1024px) {
+  .footer-col {
+    width: 50%; /* 2 kolona në rresht në Footer */
+    margin-bottom: 30px;
+  }
+}
+
+/* Për Mobile (Nën 768px) */
+@media (max-width: 768px) {
+  .header-logo, 
+  .header-nav, 
+  .header-actions {
+    float: none;
+    width: 100%;
     text-align: center;
-
-    margin-top: 30px;
-
-    border-top: 1px solid #444;
-
-    padding-top: 20px;
-}
-
-/* =========================
-   MEDIA QUERIES
-========================= */
-
-/* TABLETS */
-
-@media screen and (max-width: 992px) {
-
-    .navbar {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .footer-container {
-        justify-content: center;
-        text-align: center;
-    }
-}
-
-/* MOBILE */
-
-@media screen and (max-width: 768px) {
-
-    .nav-links {
-        flex-direction: column;
-        align-items: center;
-
-        gap: 15px;
-    }
-
-    .search-form {
-        width: 100%;
-
-        flex-direction: column;
-    }
-
-    input[type="search"] {
-        width: 100%;
-    }
-
-    .search-form button {
-        width: 100%;
-    }
-
-    .main-content {
-        padding: 50px 20px;
-    }
-}
-
-/* SMALL MOBILE */
-
-@media screen and (max-width: 480px) {
-
-    .navbar {
-        padding: 20px;
-    }
-
-    .logo h1 {
-        font-size: 1.5rem;
-    }
-
-    .footer {
-        padding: 40px 20px 20px;
-    }
+    padding: 10px 0;
+  }
+  
+  .header-nav ul li {
+    margin: 5px 10px;
+  }
+  
+  .header-actions a {
+    margin: 0 15px;
+  }
+  
+  .page-hero h1 {
+    font-size: 32px;
+  }
+  
+  .footer-col {
+    float: none;
+    width: 100%; /* 1 kolonë në rresht në Footer */
+    padding-right: 0;
+    text-align: center;
+  }
 }
