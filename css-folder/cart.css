@@ -1,0 +1,252 @@
+.cart-main {
+    padding: 40px 5%;
+    min-height: 100vh;
+}
+
+.cart-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.cart-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 30px;
+    align-items: start;
+}
+
+/* EMPTY */
+.cart-empty {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
+    grid-column: 1 / 2;
+}
+
+.cart-empty.visible {
+    display: flex;
+}
+
+.empty-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+}
+
+.cart-empty p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.continue-btn {
+    padding: 12px 24px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #333;
+}
+
+/* CART ITEMS */
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-card {
+    display: flex;
+    gap: 20px;
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    align-items: center;
+}
+
+.cart-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.cart-card-info {
+    flex: 1;
+}
+
+.cart-card-info h3 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.cart-card-info p {
+    color: gray;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.cart-card-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: black !important;
+}
+
+.cart-card-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.qty-btn {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background: white;
+    border-radius: 6px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qty-btn:hover {
+    background: #f0f0f0;
+}
+
+.qty-value {
+    font-size: 16px;
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.remove-btn {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #e00;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.remove-btn:hover {
+    color: #a00;
+}
+
+/* SUMMARY */
+.cart-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 20px;
+}
+
+.cart-summary h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #444;
+}
+
+.summary-divider {
+    border-top: 1px solid #eee;
+    margin: 15px 0;
+}
+
+.total-row {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.checkout-btn {
+    width: 100%;
+    padding: 14px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease;
+}
+
+.checkout-btn:hover {
+    background: #333;
+}
+
+.continue-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #555;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.continue-link:hover {
+    color: black;
+}
+
+/* CART ICON */
+.cart-icon {
+    position: relative;
+    font-size: 22px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#cart-counter {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .cart-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .cart-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .cart-main {
+        padding: 20px;
+    }
+}
