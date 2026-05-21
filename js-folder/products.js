@@ -20,7 +20,7 @@ const products = [
     },
     {
         id: 2,
-        tittle: "Apple MacBook Pro, 16, M5 Max 18-core, 48GB, 2TB, 40-core GPU, Space Black",
+        tittle: "Apple MacBook Pro, 16, M5",
         type: "elektronike",
         price: 4700.00,
         description: "MacBook Pro 16-inch M5 Max është një laptop profesional me performancë të jashtëzakonshme, projektuar për krijues, inxhinierë, profesionistë të media dhe këdo që kërkon fuqi maksimale nga një pajisje mobile. I pajisur me çipin Apple M5 Max me 18-core GPU, ky MacBook Pro ofron performancë të jashtëzakonshme në përpunimin e grafikës, rendering video, simulime komplekse dhe aplikacione intensive që kërkojnë shumë burime, gjithmonë me efikasitet energjie dhe qetësi të operimit.",
@@ -29,7 +29,7 @@ const products = [
     },
     {
         id: 3,
-        tittle: "Laptop MSI Vector A16 HX A8WHG-049XCZ, 16, AMD Ryzen 9 8940HX, 64GB RAM, 2TB SSD, NVIDIA GeForce RTX 5070 Ti, 12GB GDDR7, i hirtë",
+        tittle: "Laptop MSI Vector A16 HX A8WHG-049XCZ, 16",
         type: "elektronike",
         price: 2000.00,
         description: "MSI Vector është një laptop gaming/performance i krijuar për përdorues që kërkojnë fuqi të lartë për lojëra, programe të rënda dhe multitasking. Me procesorë modernë dhe grafika të dedikuara, ai ofron lojëra të rrjedhshme dhe punë të shpejtë me aplikacione profesionale. Dizajni zakonisht vjen me linja agresive dhe ndriçim tastiere, duke iu përshtatur mirë stilit të gamer-ëve dhe përdoruesve avancuar. Ekrani me rifreskim të shpejtë dhe rezolucion të lartë ndihmon për pamje më të qarta dhe reagim më të mirë në lojëra. MSI Vector është zgjedhje e mirë për ata që duan një kombinim të performancës së qëndrueshme dhe pamjes moderne.",
@@ -71,5 +71,14 @@ const products = [
         description: "Përshkrimi është duke u përpunuar, ndërkohë mund të shikoni specifikat teknike, apo kontaktoni në chat, email dhe messenger për detaje të mëtutjeshme.Ju faleminderit për mirëkuptim.",
         imgSrc: "../images-folder/Screenshot 2026-05-21 213533.png",
         
-    }
+    },
+    {
+        id: 8,
+        tittle: "Bluzë për fëmijë Under Armour, 623035-6198925",
+        type: "veshje",
+        price: 30.00,
+        description: "Përshkrimi është duke u përpunuar, ndërkohë mund të shikoni specifikat teknike, apo kontaktoni në chat, email dhe messenger për detaje të mëtutjeshme.Ju faleminderit për mirëkuptim.",
+        imgSrc: "../images-folder/Screenshot 2026-05-22 010727.png",
+        
+    },
 ];

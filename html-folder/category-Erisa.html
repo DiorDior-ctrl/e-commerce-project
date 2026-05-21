@@ -6,6 +6,9 @@
   <title>Shop by Category — Lumière</title>
   <link rel="stylesheet" href="/css-folder/global.css">
   <link rel="stylesheet" href="/css-folder/category.css">
+  <script src="../js-folder/products.js" defer></script>
+  <script src="../js-folder/cart.js" defer></script>
+  <script src="../js-folder/category.js" defer></script>
 <body>
 
   <header class="site-header">
@@ -27,18 +30,19 @@
 
 
       <nav class="header-actions">
-        <a href="profile.html">Llogaria</a>
-        <a href="cart.html">Shporta (3)</a>
+        <a href="profile-Alisa.html">Llogaria</a>
+        <a href="cart-Diori.html">Shporta</a>
       </nav>
     </div>
 
     <nav class="site-nav">
       <div class="container">
         <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="category.html" class="active">Kategoritë</a></li>
-          <li><a href="about.html">Rreth Nesh</a></li>
-          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="home-Anisa.html">Home</a></li>
+          <li><a href="shop-Diori.html" >Produkte</a></li>
+          <li><a href="category-Erisa.html" class="active">Kategoritë</a></li>
+          <li><a href="about-Anisa.html">Rreth Nesh</a></li>
+          <li><a href="contact-Alisa.html ">Kontakt</a></li>
         </ul>
       </div>
     </nav>
@@ -58,7 +62,8 @@
 
       <div class="filter-group">
         <span class="filter-group__label">Kategoritë</span>
-        <label class="filter-option"><input type="checkbox" checked> Elektronikë</label>
+        <!-- <label class="filter-option"><input type="checkbox" checked> Elektronikë</label> -->
+         <a href="#Kategoria">Kategoritë</a>
         <label class="filter-option"><input type="checkbox" checked> Veshje</label>
         <label class="filter-option"><input type="checkbox" checked> Këpucë</label>
       </div>
@@ -86,113 +91,21 @@
         </div>
       </div>
 
-      <section class="category-section clearfix" id="electronics">
-        <div class="category-section__header">
-          <span class="product-card__category">Kategoria</span>
-          <h2>Elektronikë</h2>
-        </div>
+<section id="Kategoria" class="category-section clearfix" data-category="elektronike">
+    <div class="category-section__header">
+        <span class="product-card__category">Kategoria</span>
+        <h2>Elektronikë</h2>
+    </div>
+    <div class="category-products"></div>
+</section>
 
-        <article class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&q=80" alt="Kufje">
-            <span class="product-card__badge">Best Seller</span>
-          </div>
-          <div class="product-card__body">
-            <span class="product-card__category">Elektronikë</span>
-            <h3 class="product-card__name">Kufje Wireless</h3>
-            <p class="product-card__desc">Bateri 40-orëshe me izolim akustik.</p>
-          </div>
-          <div class="product-card__footer">
-            <div class="product-card__price">129.99 €</div>
-            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&q=80" alt="Ore Inteligjente">
-            <span class="product-card__badge badge-new">E Re</span>
-          </div>
-          <div class="product-card__body">
-            <span class="product-card__category">Elektronikë</span>
-            <h3 class="product-card__name">Orë Inteligjente</h3>
-            <p class="product-card__desc">Monitorim shëndeti dhe njoftime inteligjente.</p>
-          </div>
-          <div class="product-card__footer">
-            <div class="product-card__price">249.00 €</div>
-            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&q=80" alt="Boks Bluetooth">
-            <span class="product-card__badge badge-sale">-30%</span>
-          </div>
-          <div class="product-card__body">
-            <span class="product-card__category">Elektronikë</span>
-            <h3 class="product-card__name">Boks Portativ</h3>
-            <p class="product-card__desc">Tingull 360° dhe mbrojtje nga uji.</p>
-          </div>
-          <div class="product-card__footer">
-            <div class="product-card__price"><span class="old-price">89.99 €</span> 59.99 €</div>
-            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
-          </div>
-        </article>
-      </section>
-
-      <section class="category-section clearfix" id="clothing">
-        <div class="category-section__header">
-          <span class="product-card__category">Kategoria</span>
-          <h2>Veshje</h2>
-        </div>
-
-        <article class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1529720317453-c8da503f2051?w=500&q=80" alt="Triko">
-          </div>
-          <div class="product-card__body">
-            <span class="product-card__category">Veshje</span>
-            <h3 class="product-card__name">Triko Leshi</h3>
-            <p class="product-card__desc">100% lesh Merino i butë dhe i ngrohtë.</p>
-          </div>
-          <div class="product-card__footer">
-            <div class="product-card__price">95.00 €</div>
-            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&q=80" alt="Xhakete">
-            <span class="product-card__badge badge-new">E Re</span>
-          </div>
-          <div class="product-card__body">
-            <span class="product-card__category">Veshje</span>
-            <h3 class="product-card__name">Xhaketë Liri</h3>
-            <p class="product-card__desc">Material i lehtë veror për çdo rast.</p>
-          </div>
-          <div class="product-card__footer">
-            <div class="product-card__price">145.00 €</div>
-            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
-          </div>
-        </article>
-
-        <article class="product-card">
-          <div class="product-card__image-wrapper">
-            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500&q=80" alt="T-Shirt">
-          </div>
-          <div class="product-card__body">
-            <span class="product-card__category">Veshje</span>
-            <h3 class="product-card__name">T-Shirt Pambuku</h3>
-            <p class="product-card__desc">Pambuk organik, i rehatshëm për përditë.</p>
-          </div>
-          <div class="product-card__footer">
-            <div class="product-card__price">29.00 €</div>
-            <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
-          </div>
-        </article>
-      </section>
+<section class="category-section clearfix" data-category="veshje">
+    <div class="category-section__header">
+        <span class="product-card__category">Kategoria</span>
+        <h2>Veshje</h2>
+    </div>
+    <div class="category-products"></div>
+</section>
 
     </section>
   </main>
