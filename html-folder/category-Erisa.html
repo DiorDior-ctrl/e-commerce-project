@@ -4,17 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shop by Category — GENZZONE</title>
-  
-  <!-- Linqet e sakta per CSS -->
-  <link rel="stylesheet" href="../css-folder/global.css">
-  <link rel="stylesheet" href="../css-folder/category.css">
-  
-  <!-- Linqet per JavaScript -->
+  <link rel="stylesheet" href="/css-folder/global.css">
+  <link rel="stylesheet" href="/css-folder/category.css">
   <script src="../js-folder/products.js" defer></script>
   <script src="../js-folder/cart.js" defer></script>
   <script src="../js-folder/category.js" defer></script>
   <script src="../js-folder/mobile-navbar.js" defer></script>
-</head>
 <body>
 
 <header class="site-header">
@@ -28,8 +23,7 @@
         </a>
 
         <div class="header-search">
-            <!-- Shtuam onsubmit qe te mos beje refresh faqja kur kerkojme -->
-            <form action="#" method="get" class="clearfix" onsubmit="event.preventDefault();">
+            <form action="#" method="get" class="clearfix">
                 <input type="text" placeholder="Kërko produkte..." name="q" required>
                 <button type="submit">Kërko</button>
             </form>
@@ -37,8 +31,7 @@
 
         <nav class="header-actions">
             <a href="../html-folder/login-Dior.html">Hyr</a>
-            <!-- Shporta me numrin dinamik -->
-            <a href="cart-Diori.html">Shporta </a>
+            <a href="cart-Diori.html">Shporta</a>
         </nav>
 
         <!-- Butoni qe do shfaqet ne mobile screen devices -->
@@ -55,7 +48,7 @@
                 <li><a href="home-Anisa.html">Home</a></li>
                 <li><a href="shop-Diori.html">Produkte</a></li>
                 <li><a href="category-Erisa.html" class="active">Kategoritë</a></li>
-                <li><a href="about-Anisa.html">Rreth Nesh</a></li>
+                <li><a href="about-Anisa.html" >Rreth Nesh</a></li>
                 <li><a href="contact-Alisa.html">Kontakt</a></li>
             </ul>
         </div>
@@ -76,11 +69,10 @@
 
       <div class="filter-group">
         <span class="filter-group__label">Kategoritë</span>
+        <!-- <label class="filter-option"><input type="checkbox" checked> Elektronikë</label> -->
         <a href="#kategoria">Kategoritë</a>
-        
-        <!-- Kutitë e reja me vlerat dhe klasat për JS -->
-        <label class="filter-option"><input type="checkbox" value="veshje" class="cat-filter" checked> Veshje</label>
-        <label class="filter-option"><input type="checkbox" value="elektronike" class="cat-filter" checked> Elektronikë</label>
+        <label class="filter-option"><input type="checkbox" checked> Veshje</label>
+        <label class="filter-option"><input type="checkbox" checked> Elektronikë</label>
       </div>
 
       <div class="filter-group">
@@ -89,8 +81,7 @@
         <label class="filter-option"><input type="checkbox"> Me Porosi</label>
       </div>
 
-      <!-- ID e re per butonin e filtrave -->
-      <button id="apply-filters-btn" class="btn btn-primary" type="button" style="width: 100%;">Apliko Filtrat</button>
+      <button class="btn btn-primary" type="button" style="width: 100%;">Apliko Filtrat</button>
     </aside>
 
     <section class="shop-main-content">
@@ -103,8 +94,6 @@
             <option>Të rejat</option>
             <option>Më të shiturat</option>
             <option>Çmimi: Ulët-Lart</option>
-            <!-- Opsioni i ri -->
-            <option>Çmimi: Lart-Ulët</option>
           </select>
         </div>
       </div>
@@ -164,7 +153,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; GENZZONE.</p>
+      <p>&copy;  GENZZONE.</p>
     </div>
   </footer>
 
