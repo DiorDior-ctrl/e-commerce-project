@@ -1,0 +1,286 @@
+/* about.css — Stilet për faqen Rreth Nesh */
+
+/* SEKSIONI: Historia */
+.about-historia {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+/* Teksti — float majtas */
+.historia-tekst {
+    float: left;
+    width: 55%;
+    padding-right: 60px;
+}
+
+.historia-tekst h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+}
+
+/* CSS3: pseudoelement ::after dekorativ */
+.historia-tekst h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #c18b53;
+    margin-top: 12px;
+}
+
+.historia-tekst p {
+    font-size: 15px;
+    color: #5a534e;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+/* CSS3: pseudoclass :last-child */
+.historia-tekst p:last-child {
+    margin-bottom: 0;
+}
+
+/* Foto — float djathtas */
+.historia-foto {
+    float: right;
+    width: 42%;
+}
+
+.historia-foto img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    /* CSS3: rounded corners */
+    border-radius: 4px;
+    /* CSS3: box-shadow */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    background-color: #e8e4df;
+}
+
+/* SEKSIONI: Vlerat */
+.about-vlerat {
+    padding: 80px 0;
+    background-color: #f8f7f4;
+}
+
+.about-vlerat h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* CSS3: pseudoelement ::after */
+.about-vlerat h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #c18b53;
+    margin: 12px auto 0 auto;
+}
+
+/* CSS3: child selector > */
+.vlerat-grid > .vlera-item {
+    float: left;
+    width: 25%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.vlera-ikone {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 48px;
+    font-weight: 600;
+    color: #c18b53;
+    margin-bottom: 15px;
+    line-height: 1;
+}
+
+.vlera-item h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.vlera-item p {
+    font-size: 14px;
+    color: #8a837b;
+    line-height: 1.8;
+}
+
+/* SEKSIONI: Statistikat */
+.about-statistikat {
+    /* CSS3: gradient */
+    background: linear-gradient(135deg, #1c1a18 0%, #2b2522 100%);
+    padding: 70px 0;
+}
+
+/* CSS3: child selector > */
+.stat-grid > .stat-item {
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 0 20px;
+}
+
+/* CSS3: adjacent sibling selector + */
+.stat-item + .stat-item {
+    border-left: 1px solid #36322f;
+}
+
+.stat-item strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 600;
+    color: #c18b53;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    font-size: 13px;
+    color: #8a837b;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* SEKSIONI: Ekipi */
+.about-ekipi {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.about-ekipi h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* CSS3: pseudoelement ::after */
+.about-ekipi h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #c18b53;
+    margin: 12px auto 0 auto;
+}
+
+.ekipi-pershkrim {
+    text-align: center;
+    color: #8a837b;
+    font-size: 16px;
+    margin-bottom: 50px;
+}
+
+/* CSS3: child selector > */
+.ekipi-grid > .anetare-item {
+    float: left;
+    width: 20%;
+    padding: 0 15px;
+    text-align: center;
+}
+
+/* CSS3: pseudoclass :hover */
+.anetare-item:hover .foto-anetari {
+    transform: scale(1.03);
+}
+
+.anetare-item figure {
+    margin: 0;
+}
+
+.anetare-item img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #e8e4df;
+    /* CSS3: transition */
+    transition: transform 0.3s ease;
+    margin-bottom: 18px;
+}
+
+/* CSS3: pseudoclass :hover mbi img */
+.anetare-item:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.anetare-item figcaption h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.anetare-item figcaption p {
+    font-size: 13px;
+    color: #c18b53;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* SEKSIONI: CTA */
+.about-cta {
+    /* CSS3: gradient */
+    background: linear-gradient(135deg, #faf6f0 0%, #f0e8dc 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.about-cta p {
+    color: #8a837b;
+    font-size: 17px;
+    margin-bottom: 30px;
+}
+
+/* RESPONSIVE — Tablet */
+@media (max-width: 1024px) {
+    .vlerat-grid > .vlera-item,
+    .ekipi-grid > .anetare-item {
+        width: 50%;
+        margin-bottom: 40px;
+    }
+
+    .stat-grid > .stat-item {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+
+    .stat-item + .stat-item {
+        border-left: none;
+    }
+}
+
+/* RESPONSIVE — Mobile */
+@media (max-width: 768px) {
+    .historia-tekst,
+    .historia-foto {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .historia-foto {
+        margin-top: 30px;
+    }
+
+    .vlerat-grid > .vlera-item,
+    .ekipi-grid > .anetare-item,
+    .stat-grid > .stat-item {
+        float: none;
+        width: 100%;
+        margin-bottom: 35px;
+    }
+
+    .about-historia,
+    .about-vlerat,
+    .about-ekipi,
+    .about-cta {
+        padding: 50px 0;
+    }
+}
