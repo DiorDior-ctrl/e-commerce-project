@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
+    <title>Profili Im — Genzzone</title>
     <link rel="stylesheet" href="../css-folder/global.css">
+    <link rel="stylesheet" href="../css-folder/profile.css">
     <script src="../js-folder/mobile-navbar.js" defer></script>
 </head>
 <body>
@@ -52,15 +53,288 @@
         </div>
     </nav>
 </header>
-  <!-- Mos prek asgje mbi kete line vazhdo poshte -->
+<!-- Mos prek asgje mbi kete line vazhdo poshte -->
 
+  <!-- TITULLI I FAQES -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Profili Im</h1>
+      <p>Menaxho llogarinë dhe porositë e tua</p>
+    </div>
+  </section>
 
+  <main class="profile-wrapper">
+    <div class="container clearfix">
 
+      <!-- KOLONA E MAJTE: Navigimi i profilit -->
+      <aside class="profile-nav">
+        <div class="profil-koka">
+          <!-- Foto e profilit -->
+          <div class="foto-wrapper">
+            <img id="foto-profili" src="../images/default-avatar.jpg" alt="Foto Profili" />
+            <label for="ndrysho-foto" class="ndrysho-foto-btn" title="Ndrysho foton">&#9998;</label>
+            <!-- HTML5: input type="file" -->
+            <input type="file" id="ndrysho-foto" accept="image/*" style="display: none;" />
+          </div>
+          <h3 id="emri-display">Alisa Hoxha</h3>
+          <p id="email-display">alisa@email.com</p>
+        </div>
 
+        <!-- Menuja e seksioneve -->
+        <ul class="profile-menu">
+          <li><a href="#te-dhenat" class="menu-link active" data-seksion="te-dhenat">&#128100; Të Dhënat</a></li>
+          <li><a href="#porositë" class="menu-link" data-seksion="porosite">&#128230; Porositë</a></li>
+          <li><a href="#adresat" class="menu-link" data-seksion="adresat">&#128205; Adresat</a></li>
+          <li><a href="#fjalekalimi" class="menu-link" data-seksion="fjalekalimi">&#128274; Fjalëkalimi</a></li>
+        </ul>
+      </aside>
 
+      <!-- KOLONA E DJATHTE: Permbajtja e seksioneve -->
+      <div class="profile-permbajtja">
 
+        <!-- SEKSIONI 1: Te dhenat personale -->
+        <section id="te-dhenat" class="seksion-profili aktiv">
+          <div class="seksion-box">
+            <h2>Të Dhënat Personale</h2>
 
+            <div id="sukses-te-dhenat" class="sukses-box" style="display: none;">
+              <p>&#10003; Të dhënat u ruajtën me sukses!</p>
+            </div>
 
+            <form id="forma-te-dhenat" novalidate>
+
+              <div class="dy-kolona clearfix">
+                <div class="grup-fushe gjysma">
+                  <label for="emri">Emri <span class="yll">*</span></label>
+                  <input type="text" id="emri" name="emri" value="Alisa" autocomplete="given-name" tabindex="1" />
+                  <span class="gabim" id="gabim-emri"></span>
+                </div>
+                <div class="grup-fushe gjysma">
+                  <label for="mbiemri">Mbiemri <span class="yll">*</span></label>
+                  <input type="text" id="mbiemri" name="mbiemri" value="Zuna" autocomplete="family-name" tabindex="2" />
+                  <span class="gabim" id="gabim-mbiemri"></span>
+                </div>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="email">Email <span class="yll">*</span></label>
+                <input type="email" id="email" name="email" value="alisazuna@email.com" autocomplete="email" tabindex="3" />
+                <span class="gabim" id="gabim-email"></span>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="celulari">Numri i Celularit
+                  <small class="udhezim">(Formati: 069-1234567)</small>
+                </label>
+                <input type="tel" id="celulari" name="celulari" value="069-1234567" autocomplete="tel" tabindex="4" />
+                <span class="gabim" id="gabim-celulari"></span>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="datalindjes">Data e Lindjes</label>
+                <!-- HTML5: input type="date" -->
+                <input type="date" id="datalindjes" name="datalindjes" value="2000-01-15" tabindex="5" />
+              </div>
+
+              <div class="grup-fushe">
+                <label>Gjinia</label>
+                <div class="radio-grup">
+                  <label class="radio-etikete">
+                    <input type="radio" name="gjinia" value="femer" checked tabindex="6" /> Femër
+                  </label>
+                  <label class="radio-etikete">
+                    <input type="radio" name="gjinia" value="mashkull" tabindex="7" /> Mashkull
+                  </label>
+                  <label class="radio-etikete">
+                    <input type="radio" name="gjinia" value="tjeter" tabindex="8" /> Tjetër
+                  </label>
+                </div>
+              </div>
+
+              <div class="grup-butonat">
+                <button type="submit" class="btn btn-primary" tabindex="9">Ruaj Ndryshimet</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+        <!--  SEKSIONI 2: Porositë e fundit (demo) -->
+        <section id="porosite" class="seksion-profili">
+          <div class="seksion-box">
+            <h2>Porositë e Fundit</h2>
+
+            <ul class="lista-porosive">
+              <article class="porosi-item">
+                <div class="porosi-koka clearfix">
+                  <span class="porosi-nr">Porosia #1042</span>
+                  <span class="porosi-data">12 Prill 2025</span>
+                  <span class="porosi-status aktive">E Dërguar</span>
+                </div>
+                <div class="porosi-produktet">
+                  <p>Xhaketë Lëkure &nbsp;·&nbsp; Çantë Kafe &nbsp;·&nbsp; Këpucë Nr.42</p>
+                </div>
+                <div class="porosi-footer clearfix">
+                  <span class="porosi-total">Totali: 20,500 Lekë</span>
+                  <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+                </div>
+              </article>
+
+              <article class="porosi-item">
+                <div class="porosi-koka clearfix">
+                  <span class="porosi-nr">Porosia #0987</span>
+                  <span class="porosi-data">3 Mars 2025</span>
+                  <span class="porosi-status perfunduar">E Përfunduar</span>
+                </div>
+                <div class="porosi-produktet">
+                  <p>Fustan Mbrëmjeje &nbsp;·&nbsp; Vath Argjendi</p>
+                </div>
+                <div class="porosi-footer clearfix">
+                  <span class="porosi-total">Totali: 12,300 Lekë</span>
+                  <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+                </div>
+              </article>
+
+              <article class="porosi-item">
+                <div class="porosi-koka clearfix">
+                  <span class="porosi-nr">Porosia #0854</span>
+                  <span class="porosi-data">18 Janar 2025</span>
+                  <span class="porosi-status anuluar">E Anuluar</span>
+                </div>
+                <div class="porosi-produktet">
+                  <p>Parfum Luxury Edition</p>
+                </div>
+                <div class="porosi-footer clearfix">
+                  <span class="porosi-total">Totali: 5,800 Lekë</span>
+                  <a href="single-product-Erisa.html" class="btn btn-sm">Shiko Detajet</a>
+                </div>
+              </article>
+            </ul>
+          </div>
+        </section>
+
+        <!--  SEKSIONI 3: Adresat e ruajtura -->
+        <section id="adresat" class="seksion-profili">
+          <div class="seksion-box">
+            <h2>Adresat e Ruajtura</h2>
+
+            <div id="sukses-adresa" class="sukses-box" style="display: none;">
+              <p>&#10003; Adresa u ruajt me sukses!</p>
+            </div>
+
+            <!-- Adresa ekzistuese -->
+            <div class="adresa-karte">
+              <div class="adresa-koka clearfix">
+                <strong>Adresa Kryesore</strong>
+                <span class="badge-kryesore">Kryesore</span>
+              </div>
+              <p>Alisa Hoxha</p>
+              <p>Rruga e Kavajës, Nr. 25</p>
+              <p>Tiranë, 1001</p>
+              <p>Shqipëri</p>
+            </div>
+
+            <!-- Forma për adresë të re -->
+            <h3 class="titull-nenform">Shto Adresë të Re</h3>
+
+            <form id="forma-adresa" novalidate>
+
+              <div class="dy-kolona clearfix">
+                <div class="grup-fushe gjysma">
+                  <label for="adresa-emri">Emri <span class="yll">*</span></label>
+                  <input type="text" id="adresa-emri" name="adresa-emri" placeholder="Emri" autocomplete="given-name" tabindex="1" />
+                  <span class="gabim" id="gabim-adresa-emri"></span>
+                </div>
+                <div class="grup-fushe gjysma">
+                  <label for="adresa-mbiemri">Mbiemri <span class="yll">*</span></label>
+                  <input type="text" id="adresa-mbiemri" name="adresa-mbiemri" placeholder="Mbiemri" autocomplete="family-name" tabindex="2" />
+                  <span class="gabim" id="gabim-adresa-mbiemri"></span>
+                </div>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="rruga">Adresa <span class="yll">*</span></label>
+                <input type="text" id="rruga" name="rruga" placeholder="Rruga, Numri" autocomplete="street-address" tabindex="3" />
+                <span class="gabim" id="gabim-rruga"></span>
+              </div>
+
+              <div class="dy-kolona clearfix">
+                <div class="grup-fushe gjysma">
+                  <label for="qyteti">Qyteti <span class="yll">*</span></label>
+                  <input type="text" id="qyteti" name="qyteti" placeholder="Qyteti" autocomplete="address-level2" tabindex="4" />
+                  <span class="gabim" id="gabim-qyteti"></span>
+                </div>
+                <div class="grup-fushe gjysma">
+                  <label for="kodi-postar">Kodi Postar <span class="yll">*</span></label>
+                  <!-- HTML5: input type="number" -->
+                  <input type="number" id="kodi-postar" name="kodi-postar" placeholder="1001" min="1000" max="9999" tabindex="5" />
+                  <span class="gabim" id="gabim-kodi-postar"></span>
+                </div>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="shteti-adresa">Shteti <span class="yll">*</span></label>
+                <select id="shteti-adresa" name="shteti-adresa" tabindex="6">
+                  <option value="">-- Zgjidh shtetin --</option>
+                  <option value="al">Shqipëri</option>
+                  <option value="xk">Kosovë</option>
+                  <option value="mk">Maqedoni e Veriut</option>
+                  <option value="me">Mali i Zi</option>
+                </select>
+                <span class="gabim" id="gabim-shteti-adresa"></span>
+              </div>
+
+              <div class="grup-butonat">
+                <button type="submit" class="btn btn-primary" tabindex="7">Shto Adresën</button>
+                <button type="button" class="btn btn-reset" id="pastro-adresa" tabindex="8">Pastro</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+        <!--  SEKSIONI 4: Ndrysho fjalëkalimin -->
+        <section id="fjalekalimi" class="seksion-profili">
+          <div class="seksion-box">
+            <h2>Ndrysho Fjalëkalimin</h2>
+
+            <div id="sukses-fjalekalimi" class="sukses-box" style="display: none;">
+              <p>&#10003; Fjalëkalimi u ndryshua me sukses!</p>
+            </div>
+
+            <form id="forma-fjalekalimi" novalidate>
+
+              <div class="grup-fushe">
+                <label for="fjalekalimi-vjetr">Fjalëkalimi Aktual <span class="yll">*</span></label>
+                <input type="password" id="fjalekalimi-vjetr" name="fjalekalimi-vjetr" placeholder="Fjalëkalimi aktual..." tabindex="1" />
+                <span class="gabim" id="gabim-fjalekalimi-vjetr"></span>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="fjalekalimi-ri">Fjalëkalimi i Ri <span class="yll">*</span>
+                  <small class="udhezim">(Minimumi 6 karaktere)</small>
+                </label>
+                <input type="password" id="fjalekalimi-ri" name="fjalekalimi-ri" placeholder="Fjalëkalimi i ri..." tabindex="2" />
+                <span class="gabim" id="gabim-fjalekalimi-ri"></span>
+              </div>
+
+              <div class="grup-fushe">
+                <label for="konfirmo-fjalekalimi">Konfirmo Fjalëkalimin <span class="yll">*</span></label>
+                <input type="password" id="konfirmo-fjalekalimi" name="konfirmo-fjalekalimi" placeholder="Ripërsërit fjalëkalimin..." tabindex="3" />
+                <span class="gabim" id="gabim-konfirmo"></span>
+              </div>
+
+              <div class="grup-butonat">
+                <button type="submit" class="btn btn-primary" tabindex="4">Ndrysho Fjalëkalimin</button>
+              </div>
+
+            </form>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
 
     <!-- FOOTERI MOS PREK ASGJE POSHT KETIJ LINE -->
 <footer class="site-footer">
@@ -102,6 +376,8 @@
       <p>&copy; 2024 Lumière. Projekt Universitar — Erisa.</p>
     </div>
   </footer>
+
+  <script src="../js-folder/profile.js"></script>
 
 </body>
 </html>
