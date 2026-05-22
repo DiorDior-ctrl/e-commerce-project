@@ -10,9 +10,9 @@
   <link rel="stylesheet" href="../css-folder/checkout.css" />
   <script src="../js-folder/mobile-navbar.js" defer></script>
 </head>
+
 <body>
 
-  <!-- HEADER -->
 <header class="site-header">
     <div class="header-topbar">
         Dërgesa falas për porositë mbi 75€ &nbsp;·&nbsp; Përdor kodin WELCOME10
@@ -35,7 +35,6 @@
             <a href="cart-Diori.html">Shporta</a>
         </nav>
 
-        <!-- Butoni qe do shfaqet ne mobile screen devices -->
         <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
@@ -49,282 +48,89 @@
                 <li><a href="home-Anisa.html">Home</a></li>
                 <li><a href="shop-Diori.html">Produkte</a></li>
                 <li><a href="category-Erisa.html">Kategoritë</a></li>
-                <li><a href="about-Anisa.html" class="active">Rreth Nesh</a></li>
+                <li><a href="about-Anisa.html">Rreth Nesh</a></li>
                 <li><a href="contact-Alisa.html">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 </header>
 
-  <!-- TITULLI I FAQES -->
-  <section class="page-hero">
-    <div class="container">
-      <h1>Checkout</h1>
-      <p>Plotëso të dhënat për të përfunduar porosinë</p>
-    </div>
-  </section>
+<section class="page-hero">
+  <div class="container">
+    <h1>Checkout</h1>
+    <p>Plotëso të dhënat për të përfunduar porosinë</p>
+  </div>
+</section>
 
-  <!-- PERMBAJTJA KRYESORE -->
-  <main class="checkout-wrapper">
-    <div class="container clearfix">
+<main class="checkout-wrapper">
+  <div class="container clearfix">
 
-      <!-- KOLONA E MAJTE: Formulari -->
-      <div class="checkout-forma">
+    <!-- FORM -->
+    <div class="checkout-forma">
+      <div class="seksion-box">
+        <h2>1. Adresa e Dërgesës</h2>
 
-        <!-- SEKSIONI 1: Adresa e dërgeses -->
-        <div class="seksion-box">
-          <h2>1. Adresa e Dërgesës</h2>
+        <form id="forma-checkout">
 
-          <form id="forma-checkout" novalidate>
-
-            <p class="shenime-kerkuara">Fushat e shënuara me <span class="yll">*</span> janë të detyrueshme</p>
-
-            <div class="dy-kolona clearfix">
-              <div class="grup-fushe gjysma">
-                <label for="emri">Emri <span class="yll">*</span></label>
-                <input type="text" id="emri" name="emri" placeholder="p.sh. Ola" autocomplete="given-name" autofocus tabindex="1" />
-                <span class="gabim" id="gabim-emri"></span>
-              </div>
-              <div class="grup-fushe gjysma">
-                <label for="mbiemri">Mbiemri <span class="yll">*</span></label>
-                <input type="text" id="mbiemri" name="mbiemri" placeholder="p.sh. Berisha" autocomplete="family-name" tabindex="2" />
-                <span class="gabim" id="gabim-mbiemri"></span>
-              </div>
-            </div>
-
-            <div class="grup-fushe">
-              <label for="email">Email <span class="yll">*</span></label>
-              <input type="email" id="email" name="email" placeholder="shembull@email.com" autocomplete="email" tabindex="3" />
-              <span class="gabim" id="gabim-email"></span>
-            </div>
-
-            <div class="grup-fushe">
-              <label for="celulari">Numri i Celularit <span class="yll">*</span>
-                <small class="udhezim">(Formati: 069-1234567)</small>
-              </label>
-              <input type="tel" id="celulari" name="celulari" placeholder="069-1234567" autocomplete="tel" tabindex="4" />
-              <span class="gabim" id="gabim-celulari"></span>
-            </div>
-
-            <div class="grup-fushe">
-              <label for="adresa">Adresa <span class="yll">*</span></label>
-              <input type="text" id="adresa" name="adresa" placeholder="Rruga, Numri" autocomplete="street-address" tabindex="5" />
-              <span class="gabim" id="gabim-adresa"></span>
-            </div>
-
-            <div class="dy-kolona clearfix">
-              <div class="grup-fushe gjysma">
-                <label for="qyteti">Qyteti <span class="yll">*</span></label>
-                <input type="text" id="qyteti" name="qyteti" placeholder="p.sh. Tiranë" autocomplete="address-level2" tabindex="6" />
-                <span class="gabim" id="gabim-qyteti"></span>
-              </div>
-              <div class="grup-fushe gjysma">
-                <label for="kodi-postar">Kodi Postar <span class="yll">*</span></label>
-                <!-- HTML5: input type="number" -->
-                <input type="number" id="kodi-postar" name="kodi-postar" placeholder="p.sh. 1001" min="1000" max="9999" tabindex="7" />
-                <span class="gabim" id="gabim-kodi-postar"></span>
-              </div>
-            </div>
-
-            <div class="grup-fushe">
-              <label for="shteti">Shteti <span class="yll">*</span></label>
-              <select id="shteti" name="shteti" tabindex="8">
-                <option value="">-- Zgjidh shtetin --</option>
-                <option value="al">Shqipëri</option>
-                <option value="xk">Kosovë</option>
-                <option value="mk">Maqedoni e Veriut</option>
-                <option value="me">Mali i Zi</option>
-                <option value="other">Tjetër</option>
-              </select>
-              <span class="gabim" id="gabim-shteti"></span>
-            </div>
-
-            <!-- DATA E DERGIMIT -->
-            <div class="grup-fushe">
-              <label for="data-dergimit">Data e preferuar e dërgimit <span class="yll">*</span></label>
-              <!-- HTML5: input type="date" -->
-              <input type="date" id="data-dergimit" name="data-dergimit" tabindex="9" />
-              <span class="gabim" id="gabim-data-dergimit"></span>
-            </div>
-
-            <!-- SEKSIONI 2: Metoda e Pageses -->
-            <div class="seksion-box seksion-pagesa">
-              <h2>2. Metoda e Pagesës</h2>
-
-              <div class="radio-grup">
-                <label class="radio-etikete">
-                  <input type="radio" name="pagesa" value="kartë" tabindex="10" /> Kartë Krediti/Debiti
-                </label>
-                <label class="radio-etikete">
-                  <input type="radio" name="pagesa" value="kesh" tabindex="11" /> Para në Dorë
-                </label>
-                <label class="radio-etikete">
-                  <input type="radio" name="pagesa" value="transfer" tabindex="12" /> Transfer Bankar
-                </label>
-              </div>
-              <span class="gabim" id="gabim-pagesa"></span>
-
-              <!-- Detajet e kartes — shfaqen vetem kur zgjidhet karte -->
-              <div id="detajet-karte" style="display: none;">
-                <div class="grup-fushe">
-                  <label for="nr-karte">Numri i Kartës <span class="yll">*</span>
-                    <small class="udhezim">(Formati: XXXX-XXXX-XXXX-XXXX)</small>
-                  </label>
-                  <input type="text" id="nr-karte" name="nr-karte" placeholder="1234-5678-9012-3456" tabindex="13" />
-                  <span class="gabim" id="gabim-nr-karte"></span>
-                </div>
-                <div class="dy-kolona clearfix">
-                  <div class="grup-fushe gjysma">
-                    <label for="skadenca">Skadenca <span class="yll">*</span></label>
-                    <!-- HTML5: input type="month" -->
-                    <input type="month" id="skadenca" name="skadenca" tabindex="14" />
-                    <span class="gabim" id="gabim-skadenca"></span>
-                  </div>
-                  <div class="grup-fushe gjysma">
-                    <label for="cvv">CVV <span class="yll">*</span></label>
-                    <input type="number" id="cvv" name="cvv" placeholder="123" min="100" max="999" tabindex="15" />
-                    <span class="gabim" id="gabim-cvv"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- SEKSIONI 3: Kupon Zbritjeje -->
-            <div class="seksion-box">
-              <h2>3. Kupon Zbritjeje</h2>
-              <div class="kupon-grup">
-                <input type="text" id="kupon" name="kupon" placeholder="Shkruaj kodin e kuponit..." tabindex="16" />
-                <button type="button" class="btn btn-primary btn-sm" id="butoni-kupon" tabindex="17">Apliko</button>
-              </div>
-              <span id="mesazh-kupon" class="mesazh-kupon"></span>
-            </div>
-
-            <!-- SEKSIONI 4: Drag and Drop per dokument -->
-            <div class="seksion-box">
-              <h2>4. Ngarko Dokumentin e Pagesës</h2>
-              <p class="pershkrim-seksion">Nëse ke kryer transfer bankar, ngarko këtu konfirmimin e pagesës (PDF ose imazh).</p>
-
-              <!-- Zona Drag and Drop -->
-              <div id="zona-drop" class="zona-drop">
-                <p>&#128196; Tërhiq dhe lësho skedarin këtu</p>
-                <p class="ose-tekst">— ose —</p>
-                <label for="input-skedar" class="btn btn-primary btn-sm">Zgjidh Skedar</label>
-                <input type="file" id="input-skedar" name="input-skedar" accept=".pdf, image/*" style="display: none;" tabindex="18" />
-              </div>
-
-              <!-- Lista e skedareve te ngarkuar -->
-              <ul id="lista-skedareve" class="lista-skedareve"></ul>
-            </div>
-
-            <!-- BUTONAT -->
-            <div class="grup-butonat">
-              <button type="submit" class="btn btn-primary" tabindex="19">Konfirmo Porosinë</button>
-              <button type="button" class="btn btn-reset" id="butoni-pastro" tabindex="20">Pastro</button>
-            </div>
-
-          </form>
-        </div>
-      </div>
-
-      <!-- KOLONA E DJATHTE: Permbledhja e porosise -->
-      <aside class="checkout-permbledhje">
-        <div class="seksion-box">
-          <h2>Përmbledhja e Porosisë</h2>
-
-          <!-- Produktet demo -->
-          <ul class="lista-produkteve">
-            <article class="produkt-item">
-              <img src="../images/produkt1.jpg" alt="Xhaketë Lëkure" />
-              <div class="produkt-info">
-                <h3>Xhaketë Lëkure</h3>
-                <p>Madhësia: M &nbsp;|&nbsp; Sasia: 1</p>
-                <p class="cmimi">8,500 Lekë</p>
-              </div>
-            </article>
-            <article class="produkt-item">
-              <img src="../images/produkt2.jpg" alt="Çantë Lëkure" />
-              <div class="produkt-info">
-                <h3>Çantë Lëkure</h3>
-                <p>Ngjyra: Kafe &nbsp;|&nbsp; Sasia: 1</p>
-                <p class="cmimi">5,200 Lekë</p>
-              </div>
-            </article>
-            <article class="produkt-item">
-              <img src="../images/produkt3.jpg" alt="Këpucë Klasike" />
-              <div class="produkt-info">
-                <h3>Këpucë Klasike</h3>
-                <p>Numri: 42 &nbsp;|&nbsp; Sasia: 1</p>
-                <p class="cmimi">6,800 Lekë</p>
-              </div>
-            </article>
-          </ul>
-
-          <!-- Totali -->
-          <div class="totali-box">
-            <div class="rresht-total">
-              <span>Nëntotali</span>
-              <span>20,500 Lekë</span>
-            </div>
-            <div class="rresht-total">
-              <span>Transporti</span>
-              <span class="falas">Falas</span>
-            </div>
-            <div class="rresht-total zbritja" id="rreshti-zbritjes" style="display: none;">
-              <span>Zbritja</span>
-              <span id="vlera-zbritjes" class="e-kuqe">- 0 Lekë</span>
-            </div>
-            <div class="rresht-total total-final">
-              <span>Totali</span>
-              <span id="totali-final">20,500 Lekë</span>
-            </div>
+          <div class="grup-fushe">
+            <label>Emri *</label>
+            <input type="text" required />
           </div>
+
+          <div class="grup-fushe">
+            <label>Email *</label>
+            <input type="email" required />
+          </div>
+
+          <div class="grup-fushe">
+            <label>Adresa *</label>
+            <input type="text" required />
+          </div>
+
+          <div class="grup-fushe">
+            <label>Qyteti *</label>
+            <input type="text" required />
+          </div>
+
+          <div class="grup-fushe">
+            <label>Shteti *</label>
+            <select required>
+              <option value="">Zgjidh</option>
+              <option>Shqipëri</option>
+              <option>Kosovë</option>
+            </select>
+          </div>
+
+          <button type="submit">Konfirmo Porosinë</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <aside class="checkout-permbledhje">
+      <div class="seksion-box">
+        <h2>Përmbledhja e Porosisë</h2>
+
+        <!-- KËTU FUTEN PRODUKTET NGA CART -->
+        <ul class="lista-produkteve" id="checkout-items"></ul>
+        <div class="checkout-total">
+          <h3>Totali</h3>
+          <span id="checkout-total">0 Lekë</span>
         </div>
 
-        <!-- Mesazhi i suksesit pas konfirmimit -->
-        <div id="sukses-mesazhi" class="sukses-box" style="display: none;">
-          <h3>&#10003; Porosia u konfirmua!</h3>
-          <div id="sukses-info"></div>
-        </div>
-      </aside>
+      </div>
+    </aside>
 
-    </div>
-  </main>
+  </div>
+</main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container clearfix">
-      <div class="footer-col">
-        <h3>Luxe<span>Market</span></h3>
-        <p>Platforma juaj e besuar për produkte cilësore.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigim</h4>
-        <ul>
-          <li><a href="../html-folder/home-Anisa.html">Kryefaqja</a></li>
-          <li><a href="../html-folder/shop-Diori.html">Dyqani</a></li>
-          <li><a href="../html-folder/about-Anisa.html">Rreth Nesh</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Llogaria</h4>
-        <ul>
-          <li><a href="../html-folder/register-Ola.html">Regjistrohu</a></li>
-          <li><a href="../html-folder/login-Dior.html">Hyr</a></li>
-          <li><a href="../html-folder/profile-Alisa.html">Profili Im</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Kontakt</h4>
-        <p>info@genzzone.al</p>
-        <p>+355 69 000 0000</p>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; GENZZONE. Të gjitha të drejtat e rezervuara.</p>
-    </div>
-  </footer>
+<footer class="site-footer">
+  <div class="container clearfix">
+    <p>&copy; GENZZONE</p>
+  </div>
+</footer>
 
-  <script src="../js-folder/checkout.js"></script>
+<script src="../js-folder/render-checkout.js"></script>
 
 </body>
 </html>
