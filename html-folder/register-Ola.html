@@ -8,39 +8,53 @@
 
   <link rel="stylesheet" href="../css-folder/global.css" />
   <link rel="stylesheet" href="../css-folder/register.css" />
+  <script src="../js-folder/mobile-navbar.js" defer></script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
+    <!-- NAVBARI MOS PREK ASGJE -->
+<header class="site-header">
     <div class="header-topbar">
-      Transporti falas për porosi mbi 5,000 Lekë &nbsp;|&nbsp; Kthim i lirë brenda 30 ditëve
+        Dërgesa falas për porositë mbi 75€ &nbsp;·&nbsp; Përdor kodin WELCOME10
     </div>
-    <div class="header-main container clearfix">
-      <div class="site-logo">
-        <a href="../html-folder/home-Anisa.html">Luxe<span>Market</span></a>
-      </div>
-      <div class="header-search">
-        <input type="search" placeholder="Kërko produkte..." autocomplete="off" />
-        <button type="button">&#128269;</button>
-      </div>
-      <div class="header-actions">
-        <a href="../html-folder/login-Dior.html">Hyr</a>
-        <a href="../html-folder/cart-Diori.html">Shporta</a>
-      </div>
+
+    <div class="container clearfix header-main">
+        <a href="home-Anisa.html" class="site-logo">
+            Lumi<span>è</span>re
+        </a>
+
+        <div class="header-search">
+            <form action="#" method="get" class="clearfix">
+                <input type="text" placeholder="Kërko produkte..." name="q" required>
+                <button type="submit">Kërko</button>
+            </form>
+        </div>
+
+        <nav class="header-actions">
+            <a href="../html-folder/login-Dior.html">Hyr</a>
+            <a href="cart-Diori.html">Shporta</a>
+        </nav>
+
+        <!-- Butoni qe do shfaqet ne mobile screen devices -->
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
-    <nav class="site-nav">
-      <div class="container">
-        <ul>
-          <li><a href="../html-folder/home-Anisa.html">Kryefaqja</a></li>
-          <li><a href="../html-folder/shop-Diori.html">Dyqani</a></li>
-          <li><a href="../html-folder/category-Erisa.html">Kategoritë</a></li>
-          <li><a href="../html-folder/about-Anisa.html">Rreth Nesh</a></li>
-          <li><a href="../html-folder/contact-Alisa.html">Kontakt</a></li>
-        </ul>
-      </div>
+
+    <nav class="site-nav" id="site-nav">
+        <div class="container">
+            <ul>
+                <li><a href="home-Anisa.html">Home</a></li>
+                <li><a href="shop-Diori.html">Produkte</a></li>
+                <li><a href="category-Erisa.html">Kategoritë</a></li>
+                <li><a href="about-Anisa.html">Rreth Nesh</a></li>
+                <li><a href="contact-Alisa.html">Kontakt</a></li>
+            </ul>
+        </div>
     </nav>
-  </header>
+</header>
 
   <!-- TITULLI I FAQES -->
   <section class="page-hero">
@@ -278,37 +292,43 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
+<footer class="site-footer">
     <div class="container clearfix">
       <div class="footer-col">
-        <h3>Luxe<span>Market</span></h3>
-        <p>Platforma juaj e besuar për produkte cilësore.</p>
+        <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #fff; margin-bottom: 15px;">Lumi<span style="color: #c18b53; font-style: italic;">è</span>re</h3>
+        <p style="color: #8a837b; font-size: 14px;">Një koleksion i kuruar objektesh. Projektuar me kujdes dhe elegancë.</p>
       </div>
+
       <div class="footer-col">
-        <h4>Navigim</h4>
+        <h4>Bli Tani</h4>
         <ul>
-          <li><a href="../html-folder/home-Anisa.html">Kryefaqja</a></li>
-          <li><a href="../html-folder/shop-Diori.html">Dyqani</a></li>
-          <li><a href="../html-folder/about-Anisa.html">Rreth Nesh</a></li>
+          <li><a href="#electronics">Elektronikë</a></li>
+          <li><a href="#clothing">Veshje</a></li>
+          <li><a href="#shoes">Këpucë</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h4>Llogaria</h4>
+        <h4>Ndihmë</h4>
         <ul>
-          <li><a href="../html-folder/register-Ola.html">Regjistrohu</a></li>
-          <li><a href="../html-folder/login-Dior.html">Hyr</a></li>
-          <li><a href="../html-folder/profile-Alisa.html">Profili Im</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="#">Dërgesat</a></li>
+          <li><a href="#">Kthimet</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
-        <h4>Kontakt</h4>
-        <p>info@luxemarket.al</p>
-        <p>+355 69 000 0000</p>
+        <h4>Kompania</h4>
+        <ul>
+          <li><a href="about.html">Rreth Nesh</a></li>
+          <li><a href="#">Privatësia</a></li>
+          <li><a href="#">Termat e Shërbimit</a></li>
+        </ul>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2025 LuxeMarket. Të gjitha të drejtat e rezervuara.</p>
+      <p>&copy; 2024 Lumière. Projekt Universitar — Erisa.</p>
     </div>
   </footer>
 

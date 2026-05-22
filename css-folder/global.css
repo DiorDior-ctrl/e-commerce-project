@@ -207,6 +207,37 @@ background-color: #2b2522;
 .site-nav ul li a.active {
   color: #ffffff;
 }
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+/* HAMBURGER ANIMACION KUR ESHTE HAPUR */
+.hamburger.open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
 
 /* ============================================================
    PAGE HERO GLOBALE (Për titujt e faqeve si Rreth Nesh, Kontakt etj)
@@ -349,4 +380,40 @@ background-color: #2b2522;
     padding-right: 0;
     text-align: center;
   }
+      .hamburger {
+        display: flex;
+    }
+
+    .header-search {
+        display: none;
+    }
+
+    .site-nav {
+        display: none;
+        border-top: 1px solid #e8e4df;
+    }
+
+    .site-nav.open {
+        display: block;
+    }
+
+    .site-nav ul {
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .site-nav ul li {
+        width: 100%;
+    }
+
+    .site-nav ul li a {
+        display: block;
+        padding: 14px 20px;
+        font-size: 15px;
+        border-bottom: 1px solid #f2efeb;
+    }
+
+    .site-nav ul li:last-child a {
+        border-bottom: none;
+    }
 }
