@@ -1,0 +1,263 @@
+/* register.css — Stilet per faqen e Regjistrimit,
+ @font-face per fontin lokal (kerkese nga projekti) */
+
+/* Font i personalizuar me @font-face */
+@font-face {
+  font-family: 'LuxeCustom';
+  src: url('../fonts/cormorant-garamond.woff2') format('woff2'),
+       url('../fonts/cormorant-garamond.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ZONA KU VENDOSET FORMULARI */
+.register-wrapper {
+  padding: 60px 0 80px 0;
+}
+
+/* Kutia e bardhe qe mban formularin */
+.register-box {
+  max-width: 620px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 50px 60px;
+  border: 1px solid #e8e4df;
+  /* CSS3: rounded corners */
+  border-radius: 4px;
+  /* CSS3: box-shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* GRUPET E FUSHAVE */
+.grup-fushe {
+  margin-bottom: 22px;
+}
+
+/* Etiketat e fushave */
+.grup-fushe label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1c1a18;
+  margin-bottom: 8px;
+}
+
+/* Udhezimet e vogla brenda etiketave */
+.grup-fushe label small.udhezim {
+  font-size: 11px;
+  color: #8a837b;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* Te gjitha fushat e inputit */
+.grup-fushe input[type="text"],
+.grup-fushe input[type="email"],
+.grup-fushe input[type="password"],
+.grup-fushe input[type="tel"],
+.grup-fushe input[type="date"],
+.grup-fushe input[type="number"],
+.grup-fushe input[type="file"],
+.grup-fushe select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #d4cfc9;
+  border-radius: 4px;
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  color: #2c2825;
+  background-color: #faf9f7;
+  /* CSS3: transition */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Kur klikojme mbi fushë (focus) */
+/* CSS3: pseudoclass :focus */
+.grup-fushe input:focus,
+.grup-fushe select:focus {
+  border-color: #c18b53;
+  box-shadow: 0 0 0 3px rgba(193, 139, 83, 0.15);
+  background-color: #ffffff;
+}
+
+/* Kur fusha ka gabim — e kuqe */
+/* CSS3: attribute selector */
+.grup-fushe input.ka-gabim,
+.grup-fushe select.ka-gabim {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+/* Kur fusha eshte e saktë — jeshile */
+.grup-fushe input.e-sakte,
+.grup-fushe select.e-sakte {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* MESAZHET E GABIMIT */
+.gabim {
+  display: block;
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+/* RADIO BUTONAT DHE CHECKBOXAT */
+.radio-grup,
+.checkbox-grup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+/* CSS3: pseudoclass :hover mbi etiketat */
+.radio-etikete,
+.check-etikete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #2c2825;
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 1px solid #d4cfc9;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.radio-etikete:hover,
+.check-etikete:hover {
+  border-color: #c18b53;
+  color: #c18b53;
+}
+
+/* CSS3: adjacent sibling selector (+) - kur input është checked, stilizo labelën */
+.radio-etikete input[type="radio"]:checked + span,
+.check-etikete input[type="checkbox"]:checked + span {
+  color: #c18b53;
+}
+
+/* BUTONAT E FORMULARIT  */
+.grup-butonat {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+/* Butoni reset — stilim i ndryshem nga btn-primary */
+.btn-reset {
+  background-color: transparent;
+  border: 1px solid #d4cfc9;
+  color: #8a837b;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+  border-color: #1c1a18;
+  color: #1c1a18;
+}
+
+/* SHENIME DHE LINKU PER LOGIN */
+.shenime-kerkuara {
+  font-size: 13px;
+  color: #8a837b;
+  margin-bottom: 25px;
+}
+
+/* CSS3: pseudoelement ::after për yllin e kuq */
+.yll {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+.link-login {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 14px;
+  color: #8a837b;
+}
+
+/* CSS3: pseudoclass :hover */
+.link-login a:hover {
+  color: #c18b53;
+}
+
+/* KUTIA E SUKSESIT (shfaqet pas dërgimit) */
+.sukses-box {
+  background-color: #f0faf4;
+  border: 1px solid #27ae60;
+  border-radius: 4px;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.sukses-box h3 {
+  color: #27ae60;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+/* CSS3: border-radius mbi imazhin e profilit */
+.sukses-box img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #c18b53;
+  margin-bottom: 10px;
+}
+
+.sukses-box figcaption {
+  font-size: 14px;
+  color: #2c2825;
+  line-height: 1.8;
+}
+
+/* CSS3: GRADIENT ne titullin e faqes (override i page-hero)*/
+.page-hero {
+  /* CSS3: gradient */
+  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+}
+
+/* CSS3: pseudoelement ::after dekorativ nen titull */
+.page-hero h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #c18b53;
+  margin: 15px auto 0 auto;
+}
+
+/* RESPONSIVE — Mobile (nën 768px) */
+@media (max-width: 768px) {
+  .register-box {
+    padding: 30px 20px;
+  }
+
+  .grup-butonat {
+    flex-direction: column;
+  }
+
+  .radio-grup,
+  .checkbox-grup {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

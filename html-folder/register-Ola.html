@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Regjistrohu në Luxe Market" />
+  <title>Regjistrohu — Luxe Market</title>
+
+  <link rel="stylesheet" href="../css-folder/global.css" />
+  <link rel="stylesheet" href="../css-folder/register.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-topbar">
+      Transporti falas për porosi mbi 5,000 Lekë &nbsp;|&nbsp; Kthim i lirë brenda 30 ditëve
+    </div>
+    <div class="header-main container clearfix">
+      <div class="site-logo">
+        <a href="../html-folder/home-Anisa.html">Luxe<span>Market</span></a>
+      </div>
+      <div class="header-search">
+        <input type="search" placeholder="Kërko produkte..." autocomplete="off" />
+        <button type="button">&#128269;</button>
+      </div>
+      <div class="header-actions">
+        <a href="../html-folder/login-Dior.html">Hyr</a>
+        <a href="../html-folder/cart-Diori.html">Shporta</a>
+      </div>
+    </div>
+    <nav class="site-nav">
+      <div class="container">
+        <ul>
+          <li><a href="../html-folder/home-Anisa.html">Kryefaqja</a></li>
+          <li><a href="../html-folder/shop-Diori.html">Dyqani</a></li>
+          <li><a href="../html-folder/category-Erisa.html">Kategoritë</a></li>
+          <li><a href="../html-folder/about-Anisa.html">Rreth Nesh</a></li>
+          <li><a href="../html-folder/contact-Alisa.html">Kontakt</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- TITULLI I FAQES -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Krijo Llogarinë</h1>
+      <p>Bashkohu me mijëra klientë të kënaqur</p>
+    </div>
+  </section>
+
+  <!-- FORMULARI I REGJISTRIMIT -->
+  <main class="register-wrapper">
+    <div class="container">
+      <div class="register-box">
+
+        <!-- Shfaqet pas dergimit te suksesshem te formularit -->
+        <div id="sukses-mesazhi" class="sukses-box" style="display: none;">
+          <h3>&#10003; Llogaria u krijua me sukses!</h3>
+          <figure>
+            <img id="sukses-foto" src="" alt="Fotoja e ngarkuar" />
+            <figcaption id="sukses-info"></figcaption>
+          </figure>
+        </div>
+
+        <form id="forma-regjistrimit" novalidate>
+
+          <!-- Fushat e kerkuara shenohen me * -->
+          <p class="shenime-kerkuara">Fushat e shënuara me <span class="yll">*</span> janë të detyrueshme</p>
+
+          <!-- EMRI DHE MBIEMRI -->
+          <div class="grup-fushe">
+            <label for="emri">Emri <span class="yll">*</span></label>
+            <input
+              type="text"
+              id="emri"
+              name="emri"
+              placeholder="p.sh. Ariola"
+              autocomplete="given-name"
+              autofocus
+              tabindex="1"
+            />
+            <span class="gabim" id="gabim-emri"></span>
+          </div>
+
+          <div class="grup-fushe">
+            <label for="mbiemri">Mbiemri <span class="yll">*</span></label>
+            <input
+              type="text"
+              id="mbiemri"
+              name="mbiemri"
+              autocomplete="family-name"
+              placeholder="p.sh. Palluçi"
+              tabindex="2"
+            />
+            <span class="gabim" id="gabim-mbiemri"></span>
+          </div>
+
+          <!-- EMAIL -->
+          <div class="grup-fushe">
+            <label for="email">Email <span class="yll">*</span></label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="shembull@email.com"
+              autocomplete="email"
+              tabindex="3"
+            />
+            <span class="gabim" id="gabim-email"></span>
+          </div>
+
+          <!-- NUMRI I CELULARIT -->
+          <div class="grup-fushe">
+            <label for="celulari">Numri i Celularit <span class="yll">*</span>
+              <small class="udhezim">(Formati: 069-1234567)</small>
+            </label>
+            <input
+              type="tel"
+              id="celulari"
+              name="celulari"
+              placeholder="069-1234567"
+              autocomplete="tel"
+              tabindex="4"
+            />
+            <span class="gabim" id="gabim-celulari"></span>
+          </div>
+
+          <!-- DATA E LINDJES -->
+          <div class="grup-fushe">
+            <label for="datalindjes">Data e Lindjes <span class="yll">*</span></label>
+            <!-- HTML5: input type="date" -->
+            <input
+              type="date"
+              id="datalindjes"
+              name="datalindjes"
+              tabindex="5"
+            />
+            <span class="gabim" id="gabim-datalindjes"></span>
+          </div>
+
+          <!-- GJINIA -->
+          <div class="grup-fushe">
+            <label>Gjinia <span class="yll">*</span></label>
+            <div class="radio-grup">
+              <label class="radio-etikete">
+                <input type="radio" name="gjinia" value="mashkull" tabindex="6" /> Mashkull
+              </label>
+              <label class="radio-etikete">
+                <input type="radio" name="gjinia" value="femer" tabindex="7" /> Femër
+              </label>
+              <label class="radio-etikete">
+                <input type="radio" name="gjinia" value="tjeter" tabindex="8" /> Tjetër
+              </label>
+            </div>
+            <span class="gabim" id="gabim-gjinia"></span>
+          </div>
+
+          <!-- ADRESA -->
+          <div class="grup-fushe">
+            <label for="adresa">Adresa <span class="yll">*</span></label>
+            <input
+              type="text"
+              id="adresa"
+              name="adresa"
+              placeholder="Rruga, Numri, Qyteti"
+              autocomplete="street-address"
+              tabindex="9"
+            />
+            <span class="gabim" id="gabim-adresa"></span>
+          </div>
+
+          <!-- SHTETI (SELECT) -->
+          <div class="grup-fushe">
+            <label for="shteti">Shteti <span class="yll">*</span></label>
+            <select id="shteti" name="shteti" tabindex="10">
+              <option value="">-- Zgjidh shtetin --</option>
+              <option value="al">Shqipëri</option>
+              <option value="xk">Kosovë</option>
+              <option value="mk">Maqedoni e Veriut</option>
+              <option value="me">Mali i Zi</option>
+              <option value="other">Tjetër</option>
+            </select>
+            <span class="gabim" id="gabim-shteti"></span>
+          </div>
+
+          <!-- INTERESAT (CHECKBOX) -->
+          <div class="grup-fushe">
+            <label>Interesat e tua <span class="yll">*</span>
+              <small class="udhezim">(Zgjidh të paktën një)</small>
+            </label>
+            <div class="checkbox-grup">
+              <label class="check-etikete">
+                <input type="checkbox" name="interesat" value="mode" tabindex="11" /> Modë
+              </label>
+              <label class="check-etikete">
+                <input type="checkbox" name="interesat" value="aksesore" tabindex="12" /> Aksesorë
+              </label>
+              <label class="check-etikete">
+                <input type="checkbox" name="interesat" value="kozmetike" tabindex="13" /> Kozmetikë
+              </label>
+              <label class="check-etikete">
+                <input type="checkbox" name="interesat" value="shtepi" tabindex="14" /> Shtëpi & Dekor
+              </label>
+            </div>
+            <span class="gabim" id="gabim-interesat"></span>
+          </div>
+
+          <!-- FJALEKALIMI -->
+          <div class="grup-fushe">
+            <label for="fjalekalimi">Fjalëkalimi <span class="yll">*</span>
+              <small class="udhezim">(Minimumi 6 karaktere)</small>
+            </label>
+            <input
+              type="password"
+              id="fjalekalimi"
+              name="fjalekalimi"
+              placeholder="Shkruaj fjalëkalimin..."
+              autocomplete="new-password"
+              tabindex="15"
+            />
+            <span class="gabim" id="gabim-fjalekalimi"></span>
+          </div>
+
+          <div class="grup-fushe">
+            <label for="konfirmo-fjalekalimi">Konfirmo Fjalëkalimin <span class="yll">*</span></label>
+            <input
+              type="password"
+              id="konfirmo-fjalekalimi"
+              name="konfirmo-fjalekalimi"
+              placeholder="Ripërsërit fjalëkalimin..."
+              autocomplete="new-password"
+              tabindex="16"
+            />
+            <span class="gabim" id="gabim-konfirmo"></span>
+          </div>
+
+          <!-- FOTO PROFILI (HTML5: input type="file") -->
+          <div class="grup-fushe">
+            <label for="foto-profili">Foto Profili</label>
+            <input
+              type="file"
+              id="foto-profili"
+              name="foto-profili"
+              accept="image/*"
+              tabindex="17"
+            />
+            <span class="gabim" id="gabim-foto"></span>
+          </div>
+
+          <!-- NUMRI I POROSIVE (HTML5: input type="number") -->
+          <div class="grup-fushe">
+            <label for="porosi-mujore">Sa porosi planifikon të bësh në muaj? <span class="yll">*</span></label>
+            <input
+              type="number"
+              id="porosi-mujore"
+              name="porosi-mujore"
+              min="1"
+              max="100"
+              placeholder="p.sh. 5"
+              tabindex="18"
+            />
+            <span class="gabim" id="gabim-porosi"></span>
+          </div>
+
+          <!-- BUTONAT -->
+          <div class="grup-butonat">
+            <button type="submit" class="btn btn-primary" tabindex="19">Regjistrohu</button>
+            <button type="button" class="btn btn-reset" id="butoni-pastro" tabindex="20">Pastro Fushat</button>
+          </div>
+
+        </form>
+
+        <p class="link-login">Ke llogari? <a href="../html-folder/login-Dior.html">Hyr këtu</a></p>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container clearfix">
+      <div class="footer-col">
+        <h3>Luxe<span>Market</span></h3>
+        <p>Platforma juaj e besuar për produkte cilësore.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigim</h4>
+        <ul>
+          <li><a href="../html-folder/home-Anisa.html">Kryefaqja</a></li>
+          <li><a href="../html-folder/shop-Diori.html">Dyqani</a></li>
+          <li><a href="../html-folder/about-Anisa.html">Rreth Nesh</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Llogaria</h4>
+        <ul>
+          <li><a href="../html-folder/register-Ola.html">Regjistrohu</a></li>
+          <li><a href="../html-folder/login-Dior.html">Hyr</a></li>
+          <li><a href="../html-folder/profile-Alisa.html">Profili Im</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <p>info@luxemarket.al</p>
+        <p>+355 69 000 0000</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 LuxeMarket. Të gjitha të drejtat e rezervuara.</p>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT I VALIDIMIT -->
+  <script src="../js-folder/register.js"></script>
+
+</body>
+</html>

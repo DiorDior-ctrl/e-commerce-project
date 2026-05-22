@@ -1,0 +1,468 @@
+/* checkout.css — Stilet per faqen e Checkout */
+
+/* LAYOUT KRYESOR — dy kolona me float */
+.checkout-wrapper {
+  padding: 60px 0 80px 0;
+}
+
+/* Kolona e majte ku është forma */
+.checkout-forma {
+  float: left;
+  width: 60%;
+  padding-right: 30px;
+}
+
+/* Kolona e djathte ku eshte permbledhja */
+.checkout-permbledhje {
+  float: right;
+  width: 38%;
+}
+
+/* Kutia e çdo seksioni */
+.seksion-box {
+  background-color: #ffffff;
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  padding: 30px;
+  margin-bottom: 25px;
+  /* CSS3: box-shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Titujt e seksioneve */
+.seksion-box h2 {
+  font-size: 20px;
+  color: #1c1a18;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f2efeb;
+}
+
+/* Seksioni i pageses brenda formes */
+.seksion-pagesa {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  margin-top: 10px;
+}
+
+.seksion-pagesa h2 {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Pershkrimi i seksionit */
+.pershkrim-seksion {
+  font-size: 14px;
+  color: #8a837b;
+  margin-bottom: 15px;
+}
+
+/* DY KOLONA brenda formes */
+.dy-kolona {
+  margin: 0 -8px;
+}
+
+.grup-fushe.gjysma {
+  float: left;
+  width: 50%;
+  padding: 0 8px;
+}
+
+/* GRUPET E FUSHAVE */
+.grup-fushe {
+  margin-bottom: 18px;
+}
+
+.grup-fushe label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1c1a18;
+  margin-bottom: 7px;
+}
+
+.grup-fushe label small.udhezim {
+  font-size: 11px;
+  color: #8a837b;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* Inputet */
+.grup-fushe input[type="text"],
+.grup-fushe input[type="email"],
+.grup-fushe input[type="tel"],
+.grup-fushe input[type="number"],
+.grup-fushe input[type="date"],
+.grup-fushe input[type="month"],
+.grup-fushe select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d4cfc9;
+  border-radius: 4px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #2c2825;
+  background-color: #faf9f7;
+  /* CSS3: transition */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* CSS3: pseudoclass :focus */
+.grup-fushe input:focus,
+.grup-fushe select:focus {
+  border-color: #c18b53;
+  box-shadow: 0 0 0 3px rgba(193, 139, 83, 0.15);
+  background-color: #ffffff;
+}
+
+/* Fusha me gabim */
+.grup-fushe input.ka-gabim,
+.grup-fushe select.ka-gabim {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+/* Fusha e sakte */
+.grup-fushe input.e-sakte,
+.grup-fushe select.e-sakte {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* Mesazhet e gabimit */
+.gabim {
+  display: block;
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* RADIO BUTONAT per metoden e pageses */
+.radio-grup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.radio-etikete {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #2c2825;
+  cursor: pointer;
+  padding: 8px 16px;
+  border: 1px solid #d4cfc9;
+  border-radius: 30px;
+  /* CSS3: transition */
+  transition: all 0.2s ease;
+}
+
+/* CSS3: pseudoclass :hover */
+.radio-etikete:hover {
+  border-color: #c18b53;
+  color: #c18b53;
+}
+
+/* SEKSIONI I KUPONIT */
+.kupon-grup {
+  display: flex;
+  gap: 10px;
+}
+
+.kupon-grup input {
+  flex: 1;
+  padding: 11px 14px;
+  border: 1px solid #d4cfc9;
+  border-radius: 4px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.kupon-grup input:focus {
+  border-color: #c18b53;
+}
+
+.mesazh-kupon {
+  display: block;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.mesazh-kupon.i-sakte {
+  color: #27ae60;
+}
+
+.mesazh-kupon.ka-gabim {
+  color: #c0392b;
+}
+
+/* ZONA DRAG AND DROP */
+.zona-drop {
+  border: 2px dashed #d4cfc9;
+  border-radius: 4px;
+  padding: 35px 20px;
+  text-align: center;
+  color: #8a837b;
+  font-size: 15px;
+  /* CSS3: transition */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* CSS3: pseudoclass kur skedari kalon siper zones */
+.zona-drop.aktive {
+  border-color: #c18b53;
+  background-color: #fdf8f2;
+  color: #c18b53;
+}
+
+.ose-tekst {
+  margin: 10px 0;
+  font-size: 13px;
+}
+
+/* Lista e skedareve të ngarkuar */
+.lista-skedareve {
+  list-style: none;
+  margin-top: 15px;
+}
+
+/* CSS3: pseudoclass :last-child */
+.lista-skedareve li {
+  padding: 10px 14px;
+  background-color: #f8f7f4;
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #2c2825;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Butoni X për heqjen e skedarit */
+.lista-skedareve li button {
+  background: none;
+  border: none;
+  color: #c0392b;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+}
+
+/* CSS3: pseudoclass :hover mbi butonin X */
+.lista-skedareve li button:hover {
+  color: #922b21;
+}
+
+/* BUTONAT */
+.grup-butonat {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-reset {
+  background-color: transparent;
+  border: 1px solid #d4cfc9;
+  color: #8a837b;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+  border-color: #1c1a18;
+  color: #1c1a18;
+}
+
+/* PERMBLEDHJA E POROSISE — kolona e djathte */
+
+/* CSS3: pseudoelement ::after dekorativ */
+.checkout-permbledhje .seksion-box h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #c18b53;
+  margin-top: 10px;
+}
+
+/* Lista e produkteve */
+.lista-produkteve {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+/* CSS3: descendant selector — article brenda ul */
+.lista-produkteve article.produkt-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #f2efeb;
+}
+
+/* CSS3: pseudoclass :last-child — produkti i fundit pa border */
+.lista-produkteve article.produkt-item:last-child {
+  border-bottom: none;
+}
+
+.produkt-item img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: #f2efeb;
+}
+
+.produkt-info h3 {
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.produkt-info p {
+  font-size: 13px;
+  color: #8a837b;
+}
+
+.produkt-info .cmimi {
+  color: #1c1a18;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+/* Totali */
+.totali-box {
+  border-top: 1px solid #f2efeb;
+  padding-top: 15px;
+}
+
+.rresht-total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #8a837b;
+  margin-bottom: 10px;
+}
+
+.rresht-total .falas {
+  color: #27ae60;
+  font-weight: 500;
+}
+
+.rresht-total.total-final {
+  font-size: 17px;
+  font-weight: 600;
+  color: #1c1a18;
+  border-top: 1px solid #e8e4df;
+  padding-top: 12px;
+  margin-top: 5px;
+}
+
+.e-kuqe {
+  color: #c0392b;
+}
+
+/* SHENIME */
+.shenime-kerkuara {
+  font-size: 13px;
+  color: #8a837b;
+  margin-bottom: 20px;
+}
+
+.yll {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* KUTIA E SUKSESIT */
+.sukses-box {
+  background-color: #f0faf4;
+  border: 1px solid #27ae60;
+  border-radius: 4px;
+  padding: 25px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.sukses-box h3 {
+  color: #27ae60;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+#sukses-info {
+  font-size: 14px;
+  color: #2c2825;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* CSS3: GRADIENT ne page-hero */
+.page-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+}
+
+/* CSS3: pseudoelement ::after nen titull */
+.page-hero h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #c18b53;
+  margin: 15px auto 0 auto;
+}
+
+/* RESPONSIVE — Tablet (nen 1024px) */
+@media (max-width: 1024px) {
+  .checkout-forma {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+  }
+
+  .checkout-permbledhje {
+    float: none;
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+/* RESPONSIVE — Mobile (nen 768px) */
+@media (max-width: 768px) {
+  .grup-fushe.gjysma {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .radio-grup {
+    flex-direction: column;
+  }
+
+  .grup-butonat {
+    flex-direction: column;
+  }
+
+  .kupon-grup {
+    flex-direction: column;
+  }
+}
