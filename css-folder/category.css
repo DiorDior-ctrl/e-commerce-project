@@ -1,14 +1,10 @@
-/* ============================================================
-   category.css — Faqja e Produkteve
-   Teknikat Akademike: Box Model, Float, Specificity
-   ============================================================ */
 
 .shop-layout {
   margin-top: 50px;
   margin-bottom: 80px;
 }
 
-/* SHIRITI ANËSOR (SIDEBAR) - Floated Majtas */
+/*(SIDEBAR) */
 .filter-sidebar {
   float: left;
   width: 22%;
@@ -57,7 +53,7 @@
   color: #c18b53;
 }
 
-/* PËRMBAJTJA E PRODUKTEVE - Floated Djathtas */
+/*PRODUKTET*/
 .shop-main-content {
   float: right;
   width: 78%;
@@ -98,7 +94,7 @@
   cursor: pointer;
 }
 
-/* KATEGORITË E PRODUKTEVE (Me ndarjen e përmirësuar/Banner) */
+/*KATEGORITË E PRODUKTEVE */
 .category-section {
   clear: both; 
   margin-bottom: 100px; 
@@ -150,7 +146,6 @@
   position: relative; 
 }
 
-/* Logjika e rreshtave */
 .product-card:nth-child(3n) {
   margin-right: 0;
 }
@@ -257,11 +252,9 @@
 
 
 
-/* ============================================================
-   RESPONSIVE DESIGN (Media Queries)
-   ============================================================ */
+/* RESPONSIVE DESIGN  */
 
-/* Për Tablet (Nën 1024px) */
+/* Për Tablet */
 @media (max-width: 1024px) {
   .filter-sidebar {
     width: 25%;
@@ -270,28 +263,25 @@
     width: 75%;
   }
   
-  /* Bëjmë 2 karta në rresht në vend të 3 */
+  
   .product-card {
     width: 48%; 
     margin-right: 4%;
   }
   
-  /* Resetojmë rregullat e vjetra të rreshtave */
   .product-card:nth-child(3n) { margin-right: 4%; }
   .product-card:nth-child(3n+1) { clear: none; }
   
-  /* Aplikojmë rregullat e reja (Çdo kartë e dytë heq margin) */
   .product-card:nth-child(2n) { margin-right: 0; }
   .product-card:nth-child(2n+1) { clear: left; }
 }
 
-/* Për Mobile (Nën 768px) */
+/* Për Mobile*/
 @media (max-width: 768px) {
   .shop-layout {
     margin-top: 20px;
   }
   
-  /* Sidebar dhe Përmbajtja marrin gjerësi të plotë (Njëra nën tjetrën) */
   .filter-sidebar, 
   .shop-main-content {
     float: none;
@@ -311,14 +301,11 @@
     font-size: 28px;
   }
   
-  /* Produktet dalin 1 në rresht */
   .product-card {
     width: 100%;
     float: none;
     margin-right: 0;
   }
-  
-  /* Sigurohemi që asnjë kartë të mos ketë margin djathtas */
   .product-card:nth-child(n) { 
     margin-right: 0; 
     clear: both;

@@ -108,7 +108,7 @@ a {
 
 /* Pjesa kryesore e Header */
 .header-main {
-  padding: 20px 0;
+  padding: 14px 0;
 }
 
 /* Logo */
@@ -146,7 +146,8 @@ a {
 }
 
 .header-search button {
-  width: 17%;
+  width: 20%;
+  float: right;
   padding: 12px ;
   background-color: #f1f1f1dc;
   border: 1px solid #00000082;
@@ -182,7 +183,7 @@ a {
   clear: both; /* Pastron float-et e mësipërme */
   border-top: 1px solid #f2efeb;
   text-align: center;
-  padding: 15px 0;
+  padding: 11px 0;
 background-color: #2b2522;
 }
 
