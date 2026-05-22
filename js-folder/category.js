@@ -12,12 +12,17 @@ categories.forEach(category => {
         container.innerHTML += `
             <article class="product-card">
                 <div class="product-card__image-wrapper">
-                    <img src="${product.imgSrc}" alt="${product.tittle}">
+                    <a href="single-product-Erisa.html?id=${product.id}">
+                        <img src="${product.imgSrc}" alt="${product.tittle}">
+                    </a>
                 </div>
                 <div class="product-card__body">
                     <span class="product-card__category">${product.type}</span>
-                    <h3 class="product-card__name">${product.tittle}</h3>
-                    
+                    <h3 class="product-card__name">
+                        <a href="single-product-Erisa.html?id=${product.id}" style="text-decoration: none; color: inherit;">
+                            ${product.tittle}
+                        </a>
+                    </h3>
                 </div>
                 <div class="product-card__footer">
                     <div class="product-card__price">$${product.price.toFixed(2)}</div>

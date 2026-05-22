@@ -4,18 +4,43 @@ function saveCart() {
     localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function addToCart(id) {
+function addToCart(id, qty = 1) {
+
     const product = products.find(p => p.id === id);
     const existing = cart.find(item => item.id === id);
-
+    const sasia = parseInt(qty);
     if (existing) {
-        existing.quantity++;
+        existing.quantity += sasia; 
     } else {
-        cart.push({ ...product, quantity: 1 });
+        cart.push({ ...product, quantity: sasia }); 
     }
 
     saveCart();
     updateCartCounter();
+
+showToast(`Sukses: ${sasia}x "${product.tittle}" u shtuan në shportë!`);
+}
+
+function showToast(message) {
+    // 1. Krijojmë një element të ri (div) në HTML
+    const toast = document.createElement('div');
+    toast.classList.add('toast-notification');
+    toast.innerText = message;
+
+    // 2. E shtojmë në fund të faqes (në body)
+    document.body.appendChild(toast);
+
+    // 3. I japim pak kohë që të shfaqet me animacion
+    setTimeout(() => {
+        toast.classList.add('show');
+    }, 10);
+
+    // 4. E heqim automatikisht pas 3 sekondash (3000 milisekonda)
+    setTimeout(() => {
+        toast.classList.remove('show');
+        // E fshijmë plotësisht nga HTML pas animacionit të mbylljes
+        setTimeout(() => toast.remove(), 300); 
+    }, 3000);
 }
 
 function removeFromCart(id) {
@@ -101,3 +126,5 @@ function calculateTotals() {
 
 updateCartCounter();
 renderCart();
+
+
