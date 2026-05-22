@@ -1,58 +1,35 @@
+const categories = [...new Set(products.map(p => p.type))];
 
+categories.forEach(category => {
+    const section = document.querySelector(`[data-category="${category}"]`);
+    if (!section) return;
 
+    const container = section.querySelector(".category-products");
 
+    const filtered = products.filter(p => p.type === category);
 
-document.addEventListener("DOMContentLoaded", () => {
-    // 1. Lexo ID-në nga URL-ja
-    const urlParams = new URLSearchParams(window.location.search);
-    const productIdParam = urlParams.get('id');
-
-    // Nëse ka një ID në URL, gjej produktin dhe ndrysho HTML-në
-    if (productIdParam !== null) {
-        const productId = parseInt(productIdParam);
-        const product = products.find(p => p.id === productId);
-
-        if (product) {
-            // 2. Kap elementet në HTML
-            const imgElement = document.querySelector('.product-gallery img');
-            const categoryElement = document.querySelector('.product-category-label');
-            const titleElement = document.querySelector('.product-details h1');
-            const priceElement = document.querySelector('.product-details .price');
-            const descElement = document.querySelector('.product-details .description');
-            const breadcrumbSpan = document.querySelector('.breadcrumb span');
-
-            // 3. Përditëso të dhënat në faqe
-            if(imgElement) {
-                imgElement.src = product.imgSrc;
-                imgElement.alt = product.tittle;
-            }
-            if(categoryElement) categoryElement.textContent = product.type;
-            if(titleElement) titleElement.textContent = product.tittle;
-            if(priceElement) priceElement.textContent = `${product.price.toFixed(2)} €`;
-            if(descElement) descElement.textContent = product.description;
-            if(breadcrumbSpan) breadcrumbSpan.textContent = product.tittle;
-
-            // --- KODI I SHPORTËS TANI ËSHTË BRENDA DHE E NJEH PRODUKTIN ---
-            const cartForm = document.querySelector('.add-to-cart-box');
-            if (cartForm) {
-                cartForm.addEventListener('submit', function(event) {
-                    // Ndalon formën të bëjë refresh faqen
-                    event.preventDefault(); 
-                    
-                    // Lexon sasinë e zgjedhur nga klienti
-                    const quantityInput = cartForm.querySelector('input[name="quantity"]');
-                    const quantity = quantityInput ? parseInt(quantityInput.value) : 1;
-                    
-                    // Shton produktin në shportë duke dërguar ID-në dhe Sasinë
-                    addToCart(product.id, quantity);
-                });
-            }
-            // ---------------------------------------------------------------
-
-        } else {
-            document.querySelector('.product-single-wrapper').innerHTML = "<h1>Produkti nuk u gjet!</h1>";
-        }
-    }
+    filtered.forEach(product => {
+        container.innerHTML += `
+            <article class="product-card">
+                <div class="product-card__image-wrapper">
+                    <a href="single-product-Erisa.html?id=${product.id}">
+                        <img src="${product.imgSrc}" alt="${product.tittle}">
+                    </a>
+                </div>
+                <div class="product-card__body">
+                    <span class="product-card__category">${product.type}</span>
+                    <h3 class="product-card__name">
+                        <a href="single-product-Erisa.html?id=${product.id}" style="text-decoration: none; color: inherit;">
+                            ${product.tittle}
+                        </a>
+                    </h3>
+                </div>
+                <div class="product-card__footer">
+                    <div class="product-card__price">$${product.price.toFixed(2)}</div>
+                    <button class="btn btn-sm" onclick="addToCart(${product.id})">Add to Cart</button>
+                </div>
+            </article>
+        `;
+    });
 });
-
 
