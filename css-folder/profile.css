@@ -1,0 +1,521 @@
+/* profile.css — Stilet për faqen e Profilit */
+
+/* LAYOUT KRYESOR */
+.profile-wrapper {
+  padding: 60px 0 80px 0;
+}
+
+/* Kolona e majtë — navigimi */
+.profile-nav {
+  float: left;
+  width: 28%;
+  padding-right: 25px;
+}
+
+/* Kolona e djathtë — permbajtja */
+.profile-permbajtja {
+  float: right;
+  width: 69%;
+}
+
+/* KOKA E PROFILIT — foto dhe emri */
+.profil-koka {
+  background-color: #1c1a18;
+  border-radius: 4px;
+  padding: 30px 20px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* Wrapper i fotos */
+.foto-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+/* CSS3: border-radius per foto rrethore */
+.foto-wrapper img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #c18b53;
+  background-color: #36322f;
+}
+
+/* Butoni per ndryshimin e fotos */
+.ndrysho-foto-btn {
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  background-color: #c18b53;
+  color: #ffffff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  /* CSS3: transition */
+  transition: background-color 0.2s ease;
+}
+
+/* CSS3: pseudoclass :hover */
+.ndrysho-foto-btn:hover {
+  background-color: #a67840;
+}
+
+.profil-koka h3 {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.profil-koka p {
+  color: #8a837b;
+  font-size: 13px;
+}
+
+/* MENUJA E NAVIGIMIT */
+.profile-menu {
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* CSS3: child selector > */
+.profile-menu > li {
+  border-bottom: 1px solid #f2efeb;
+}
+
+/* CSS3: pseudoclass :last-child */
+.profile-menu > li:last-child {
+  border-bottom: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #8a837b;
+  font-weight: 500;
+  /* CSS3: transition */
+  transition: all 0.2s ease;
+}
+
+/* CSS3: pseudoclass :hover */
+.menu-link:hover {
+  background-color: #faf9f7;
+  color: #1c1a18;
+  padding-left: 22px;
+}
+
+/* Linku aktiv */
+.menu-link.active {
+  color: #c18b53;
+  background-color: #fdf8f2;
+  border-left: 3px solid #c18b53;
+}
+
+/* SEKSIONET — fshihen si default, shfaqet vetem ai aktiv */
+.seksion-profili {
+  display: none;
+}
+
+.seksion-profili.aktiv {
+  display: block;
+}
+
+/* Kutia e çdo seksioni */
+.seksion-box {
+  background-color: #ffffff;
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  padding: 35px;
+  /* CSS3: box-shadow */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.seksion-box h2 {
+  font-size: 22px;
+  color: #1c1a18;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f2efeb;
+}
+
+/* CSS3: pseudoelement ::after dekorativ */
+.seksion-box h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #c18b53;
+  margin-top: 10px;
+}
+
+/* DY KOLONA brenda formave */
+.dy-kolona {
+  margin: 0 -8px;
+}
+
+.grup-fushe.gjysma {
+  float: left;
+  width: 50%;
+  padding: 0 8px;
+}
+
+/* GRUPET E FUSHAVE */
+.grup-fushe {
+  margin-bottom: 18px;
+}
+
+.grup-fushe label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1c1a18;
+  margin-bottom: 7px;
+}
+
+.grup-fushe label small.udhezim {
+  font-size: 11px;
+  color: #8a837b;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* CSS3: attribute selectors per inputet */
+.grup-fushe input[type="text"],
+.grup-fushe input[type="email"],
+.grup-fushe input[type="tel"],
+.grup-fushe input[type="password"],
+.grup-fushe input[type="date"],
+.grup-fushe input[type="number"],
+.grup-fushe select {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d4cfc9;
+  border-radius: 4px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #2c2825;
+  background-color: #faf9f7;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* CSS3: pseudoclass :focus */
+.grup-fushe input:focus,
+.grup-fushe select:focus {
+  border-color: #c18b53;
+  box-shadow: 0 0 0 3px rgba(193, 139, 83, 0.15);
+  background-color: #ffffff;
+}
+
+.grup-fushe input.ka-gabim,
+.grup-fushe select.ka-gabim {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+.grup-fushe input.e-sakte,
+.grup-fushe select.e-sakte {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+.gabim {
+  display: block;
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* RADIO BUTONAT */
+.radio-grup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.radio-etikete {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 14px;
+  color: #2c2825;
+  cursor: pointer;
+  padding: 7px 14px;
+  border: 1px solid #d4cfc9;
+  border-radius: 30px;
+  transition: all 0.2s ease;
+}
+
+.radio-etikete:hover {
+  border-color: #c18b53;
+  color: #c18b53;
+}
+
+/* BUTONAT */
+.grup-butonat {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn-reset {
+  background-color: transparent;
+  border: 1px solid #d4cfc9;
+  color: #8a837b;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-reset:hover {
+  border-color: #1c1a18;
+  color: #1c1a18;
+}
+
+.yll {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* KUTIA E SUKSESIT */
+.sukses-box {
+  background-color: #f0faf4;
+  border: 1px solid #27ae60;
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.sukses-box p {
+  color: #27ae60;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* LISTA E POROSIVE */
+.lista-porosive {
+  list-style: none;
+}
+
+/* CSS3: descendant selector */
+.lista-porosive article.porosi-item {
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  padding: 18px 20px;
+  margin-bottom: 15px;
+  /* CSS3: transition */
+  transition: box-shadow 0.2s ease;
+}
+
+/* CSS3: pseudoclass :hover */
+.lista-porosive article.porosi-item:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.porosi-koka {
+  margin-bottom: 10px;
+}
+
+.porosi-nr {
+  float: left;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1c1a18;
+}
+
+.porosi-data {
+  float: left;
+  margin-left: 15px;
+  font-size: 13px;
+  color: #8a837b;
+  margin-top: 2px;
+}
+
+.porosi-status {
+  float: right;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 12px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* CSS3: klasat e statuseve */
+.porosi-status.aktive {
+  background-color: #e8f5e9;
+  color: #27ae60;
+}
+
+.porosi-status.perfunduar {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+.porosi-status.anuluar {
+  background-color: #fce8e6;
+  color: #c0392b;
+}
+
+.porosi-produktet {
+  font-size: 14px;
+  color: #8a837b;
+  margin-bottom: 12px;
+}
+
+.porosi-footer {
+  border-top: 1px solid #f2efeb;
+  padding-top: 12px;
+}
+
+.porosi-total {
+  float: left;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1c1a18;
+  margin-top: 6px;
+}
+
+.porosi-footer .btn {
+  float: right;
+}
+
+/* ADRESA KARTE */
+.adresa-karte {
+  background-color: #faf9f7;
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #2c2825;
+}
+
+.adresa-koka {
+  margin-bottom: 10px;
+}
+
+.adresa-koka strong {
+  float: left;
+  font-size: 15px;
+  color: #1c1a18;
+}
+
+.badge-kryesore {
+  float: right;
+  background-color: #c18b53;
+  color: #ffffff;
+  font-size: 11px;
+  padding: 2px 10px;
+  border-radius: 30px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.titull-nenform {
+  font-size: 16px;
+  color: #1c1a18;
+  margin-bottom: 18px;
+  padding-top: 5px;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+}
+
+/* CSS3: GRADIENT ne page-hero */
+.page-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+}
+
+/* CSS3: pseudoelement ::after ne titull */
+.page-hero h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #c18b53;
+  margin: 15px auto 0 auto;
+}
+
+/* RESPONSIVE — Tablet (nën 1024px) */
+@media (max-width: 1024px) {
+  .profile-nav {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 25px;
+  }
+
+  .profile-permbajtja {
+    float: none;
+    width: 100%;
+  }
+
+  .profil-koka {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    padding: 20px;
+  }
+
+  .foto-wrapper {
+    margin-bottom: 0;
+  }
+
+  .profile-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .profile-menu > li {
+    border-bottom: none;
+    border-right: 1px solid #f2efeb;
+  }
+}
+
+/* RESPONSIVE — Mobile (nën 768px) */
+@media (max-width: 768px) {
+  .grup-fushe.gjysma {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .seksion-box {
+    padding: 20px 15px;
+  }
+
+  .grup-butonat {
+    flex-direction: column;
+  }
+
+  .porosi-data {
+    float: none;
+    display: block;
+    margin-left: 0;
+    margin-top: 3px;
+  }
+}

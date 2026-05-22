@@ -1,0 +1,322 @@
+/* contact.css — Stilet për faqen e Kontaktit */
+
+/* LAYOUT — dy kolona me float */
+.contact-wrapper {
+  padding: 60px 0 80px 0;
+}
+
+/* Kolona e majtë — informacioni */
+.contact-info {
+  float: left;
+  width: 35%;
+  padding-right: 30px;
+}
+
+/* Kolona e djathtë — forma */
+.contact-forma {
+  float: right;
+  width: 62%;
+}
+
+/* Kutia e informacionit */
+.info-box {
+  background-color: #1c1a18;
+  border-radius: 4px;
+  padding: 35px 30px;
+  /* CSS3: box-shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.info-box h2 {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #36322f;
+}
+
+/* CSS3: pseudoelement ::after dekorativ */
+.info-box h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #c18b53;
+  margin-top: 10px;
+}
+
+/* Rreshtat e informacionit */
+.info-rresht {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  align-items: flex-start;
+}
+
+/* CSS3: pseudoclass :last-child — rreshti i fundit pa margin */
+.info-rresht:last-child {
+  margin-bottom: 0;
+}
+
+.info-ikone {
+  font-size: 20px;
+  min-width: 30px;
+  text-align: center;
+  margin-top: 2px;
+}
+
+.info-rresht strong {
+  display: block;
+  color: #c18b53;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  font-family: 'Jost', sans-serif;
+}
+
+.info-rresht p {
+  color: #8a837b;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Kutia e formës */
+.forma-box {
+  background-color: #ffffff;
+  border: 1px solid #e8e4df;
+  border-radius: 4px;
+  padding: 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* DY KOLONA brenda formës */
+.dy-kolona {
+  margin: 0 -8px;
+}
+
+.grup-fushe.gjysma {
+  float: left;
+  width: 50%;
+  padding: 0 8px;
+}
+
+/* GRUPET E FUSHAVE */
+.grup-fushe {
+  margin-bottom: 20px;
+}
+
+.grup-fushe label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1c1a18;
+  margin-bottom: 7px;
+}
+
+.grup-fushe label small.udhezim {
+  font-size: 11px;
+  color: #8a837b;
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 400;
+  margin-left: 6px;
+}
+
+/* Inputet dhe select */
+/* CSS3: attribute selectors */
+.grup-fushe input[type="text"],
+.grup-fushe input[type="email"],
+.grup-fushe input[type="tel"],
+.grup-fushe select,
+.grup-fushe textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1px solid #d4cfc9;
+  border-radius: 4px;
+  font-family: 'Jost', sans-serif;
+  font-size: 14px;
+  color: #2c2825;
+  background-color: #faf9f7;
+  /* CSS3: transition */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* Textarea specifike */
+.grup-fushe textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+
+/* CSS3: pseudoclass :focus */
+.grup-fushe input:focus,
+.grup-fushe select:focus,
+.grup-fushe textarea:focus {
+  border-color: #c18b53;
+  box-shadow: 0 0 0 3px rgba(193, 139, 83, 0.15);
+  background-color: #ffffff;
+}
+
+/* Fusha me gabim */
+.grup-fushe input.ka-gabim,
+.grup-fushe select.ka-gabim,
+.grup-fushe textarea.ka-gabim {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+/* Fusha e saktë */
+.grup-fushe input.e-sakte,
+.grup-fushe select.e-sakte,
+.grup-fushe textarea.e-sakte {
+  border-color: #27ae60;
+  box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1);
+}
+
+/* Mesazhet e gabimit */
+.gabim {
+  display: block;
+  font-size: 12px;
+  color: #c0392b;
+  margin-top: 4px;
+  min-height: 16px;
+}
+
+/* VLERESIMI ME YJE */
+.yje-grup {
+  display: flex;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.yja {
+  font-size: 30px;
+  color: #d4cfc9;
+  cursor: pointer;
+  /* CSS3: transition */
+  transition: color 0.15s ease, transform 0.15s ease;
+  user-select: none;
+}
+
+/* CSS3: pseudoclass :hover */
+.yja:hover {
+  transform: scale(1.15);
+}
+
+/* Ylli i zgjedhur dhe aktiv */
+.yja.aktive {
+  color: #c18b53;
+}
+
+/* BUTONAT */
+.grup-butonat {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.btn-reset {
+  background-color: transparent;
+  border: 1px solid #d4cfc9;
+  color: #8a837b;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* CSS3: pseudoclass :hover */
+.btn-reset:hover {
+  border-color: #1c1a18;
+  color: #1c1a18;
+}
+
+/* SHENIME */
+.shenime-kerkuara {
+  font-size: 13px;
+  color: #8a837b;
+  margin-bottom: 20px;
+}
+
+.yll {
+  color: #c0392b;
+  font-weight: 600;
+}
+
+/* KUTIA E SUKSESIT */
+.sukses-box {
+  background-color: #f0faf4;
+  border: 1px solid #27ae60;
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.sukses-box h3 {
+  color: #27ae60;
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+#sukses-info {
+  font-size: 14px;
+  color: #2c2825;
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* CSS3: GRADIENT në page-hero */
+.page-hero {
+  background: linear-gradient(135deg, #ffffff 0%, #faf6f0 100%);
+}
+
+/* CSS3: pseudoelement ::after nën titull */
+.page-hero h1::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #c18b53;
+  margin: 15px auto 0 auto;
+}
+
+/* RESPONSIVE — Tablet (nën 1024px) */
+@media (max-width: 1024px) {
+  .contact-info {
+    float: none;
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .contact-forma {
+    float: none;
+    width: 100%;
+  }
+}
+
+/* RESPONSIVE — Mobile (nën 768px) */
+@media (max-width: 768px) {
+  .grup-fushe.gjysma {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  .forma-box {
+    padding: 25px 20px;
+  }
+
+  .grup-butonat {
+    flex-direction: column;
+  }
+}

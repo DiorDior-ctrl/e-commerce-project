@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Kontakt — Genzzone</title>
     <link rel="stylesheet" href="../css-folder/global.css">
+    <link rel="stylesheet" href="../css-folder/contact.css">
     <script src="../js-folder/mobile-navbar.js" defer></script>
 </head>
 <body>
@@ -47,18 +48,158 @@
                 <li><a href="shop-Diori.html">Produkte</a></li>
                 <li><a href="category-Erisa.html">Kategoritë</a></li>
                 <li><a href="about-Anisa.html">Rreth Nesh</a></li>
-                <li><a href="contact-Alisa.html"  class="active">Kontakt</a></li>
+                <li><a href="contact-Alisa.html" class="active">Kontakt</a></li>
             </ul>
         </div>
     </nav>
 </header>
-  <!-- Mos prek
- <!-- MOS PREK ASGJE MBI KETE LINE -->
+<!-- MOS PREK ASGJE MBI KETE LINE -->
 
+  <!-- TITULLI I FAQES -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Na Kontakto</h1>
+      <p>Jemi këtu për çdo pyetje ose sugjerim</p>
+    </div>
+  </section>
 
+  <!-- PERMBAJTJA KRYESORE -->
+  <main class="contact-wrapper">
+    <div class="container clearfix">
 
-  
+      <!-- KOLONA E MAJTE: Informacioni i kontaktit -->
+      <aside class="contact-info">
+        <div class="info-box">
+          <h2>Informacioni</h2>
 
+          <div class="info-rresht">
+            <span class="info-ikone">&#128205;</span>
+            <div>
+              <strong>Adresa</strong>
+              <p>Rruga e Kavajës, Nr. 10<br />Tiranë, Shqipëri</p>
+            </div>
+          </div>
+
+          <div class="info-rresht">
+            <span class="info-ikone">&#128222;</span>
+            <div>
+              <strong>Telefoni</strong>
+              <p>+355 69 000 0000</p>
+            </div>
+          </div>
+
+          <div class="info-rresht">
+            <span class="info-ikone">&#9993;</span>
+            <div>
+              <strong>Email</strong>
+              <p>info@genzzone.al</p>
+            </div>
+          </div>
+
+          <div class="info-rresht">
+            <span class="info-ikone">&#128336;</span>
+            <div>
+              <strong>Orari</strong>
+              <p>E Hënë – E Premte<br />09:00 – 18:00</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- KOLONA E DJATHTE: Formulari -->
+      <div class="contact-forma">
+        <div class="forma-box">
+
+          <!-- Mesazhi i suksesit -->
+          <div id="sukses-mesazhi" class="sukses-box" style="display: none;">
+            <h3>&#10003; Mesazhi u dërgua me sukses!</h3>
+            <div id="sukses-info"></div>
+          </div>
+
+          <form id="forma-kontaktit" novalidate>
+
+            <p class="shenime-kerkuara">Fushat e shënuara me <span class="yll">*</span> janë të detyrueshme</p>
+
+            <!-- EMRI DHE MBIEMRI -->
+            <div class="dy-kolona clearfix">
+              <div class="grup-fushe gjysma">
+                <label for="emri">Emri <span class="yll">*</span></label>
+                <input type="text" id="emri" name="emri" placeholder="p.sh. Alisa" autocomplete="given-name" autofocus tabindex="1" />
+                <span class="gabim" id="gabim-emri"></span>
+              </div>
+              <div class="grup-fushe gjysma">
+                <label for="mbiemri">Mbiemri <span class="yll">*</span></label>
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="p.sh. Zuna" autocomplete="family-name" tabindex="2" />
+                <span class="gabim" id="gabim-mbiemri"></span>
+              </div>
+            </div>
+
+            <!-- EMAIL -->
+            <div class="grup-fushe">
+              <label for="email">Email <span class="yll">*</span></label>
+              <input type="email" id="email" name="email" placeholder="shembull@email.com" autocomplete="email" tabindex="3" />
+              <span class="gabim" id="gabim-email"></span>
+            </div>
+
+            <!-- NUMRI I CELULARIT -->
+            <div class="grup-fushe">
+              <label for="celulari">Numri i Celularit <span class="yll">*</span>
+                <small class="udhezim">(Formati: 069-1234567)</small>
+              </label>
+              <input type="tel" id="celulari" name="celulari" placeholder="069-1234567" autocomplete="tel" tabindex="4" />
+              <span class="gabim" id="gabim-celulari"></span>
+            </div>
+
+            <!-- SUBJEKTI -->
+            <div class="grup-fushe">
+              <label for="subjekti">Subjekti <span class="yll">*</span></label>
+              <select id="subjekti" name="subjekti" tabindex="5">
+                <option value="">-- Zgjidh subjektin --</option>
+                <option value="porosi">Pyetje për Porosi</option>
+                <option value="kthim">Kthim Produkti</option>
+                <option value="pagese">Problem me Pagesën</option>
+                <option value="sugjerim">Sugjerim</option>
+                <option value="tjeter">Tjetër</option>
+              </select>
+              <span class="gabim" id="gabim-subjekti"></span>
+            </div>
+
+            <!-- MESAZHI -->
+            <div class="grup-fushe">
+              <label for="mesazhi">Mesazhi <span class="yll">*</span>
+                <small class="udhezim">(Minimumi 20 karaktere)</small>
+              </label>
+              <textarea id="mesazhi" name="mesazhi" placeholder="Shkruaj mesazhin tënd këtu..." rows="5" tabindex="6"></textarea>
+              <span class="gabim" id="gabim-mesazhi"></span>
+            </div>
+
+            <!-- VLERESIMI ME YJE -->
+            <div class="grup-fushe">
+              <label>Vlerësimi yt <span class="yll">*</span></label>
+              <div class="yje-grup" id="yje-grup">
+                <span class="yja" data-vlera="1" tabindex="7">&#9733;</span>
+                <span class="yja" data-vlera="2" tabindex="8">&#9733;</span>
+                <span class="yja" data-vlera="3" tabindex="9">&#9733;</span>
+                <span class="yja" data-vlera="4" tabindex="10">&#9733;</span>
+                <span class="yja" data-vlera="5" tabindex="11">&#9733;</span>
+              </div>
+              <!-- Input i fshehur që ruan vlerën e yjeve -->
+              <input type="number" id="vleresimi" name="vleresimi" min="1" max="5" style="display: none;" />
+              <span class="gabim" id="gabim-vleresimi"></span>
+            </div>
+
+            <!-- BUTONAT -->
+            <div class="grup-butonat">
+              <button type="submit" class="btn btn-primary" tabindex="12">Dërgo Mesazhin</button>
+              <button type="button" class="btn btn-reset" id="butoni-pastro" tabindex="13">Pastro</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
 
 <!-- MOS PREK ASGJE POSHTE KETIJ LINE -->
     <!-- FOOTER -->
@@ -101,6 +242,8 @@
       <p>&copy; 2024 Lumière. Projekt Universitar — Erisa.</p>
     </div>
   </footer>
+
+  <script src="../js-folder/contact.js"></script>
 
 </body>
 </html>
