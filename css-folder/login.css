@@ -1,58 +1,148 @@
-body{
+/* login.css — Stilet për faqen e Login */
+
+body {
     margin: 0;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; 
-    background: #0f172a;
-    font-family: sans-serif;
-    gap: 15px; 
+    flex-direction: column;
+    background-color: #f8f7f4;
+    font-family: 'Jost', sans-serif;
+    gap: 0;
 }
-    .input-box{
-        position: relative;
-        width: 250px;
 
-    }
-    input{
-        width: 100%;
-        padding: 12px;
-        background-color: transparent;
-        border: 2px solid #38bdf8;
-        outline: none;
-        color: white;
-        font-size:16px;
-        border-radius: 8px;
-    }
-    label{
-        position: absolute;
-        left: 12px;
-        top: 12px;
-        color: #94a3b8;
-        pointer-events: none;
-        transition: 0.3s;
-        background-color: #0f172a;
-        padding: 0 5px;
-    }
-    input:focus+label,
-    input:valid+label{
-        top: -8px;
-        font-size:12px;
-        color: #38bdf8
+/* Kutia kryesore e login */
+.login-box {
+    background-color: #ffffff;
+    border: 1px solid #e8e4df;
+    border-radius: 4px;
+    padding: 50px 60px;
+    width: 100%;
+    max-width: 420px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
 
-    }
-    .btn-blue{
-    background-color: #38bdf8;
-    color: white;
-    border: none;
-    margin-top: 15px;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
+/* Titulli */
+.login-box h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 500;
+    color: #1c1a18;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+/* CSS3: pseudoelement ::after dekorativ */
+.login-box h1::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #c18b53;
+    margin: 10px auto 30px auto;
+}
+
+/* GRUPET E FUSHAVE */
+.input-box {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    background-color: #faf9f7;
+    border: 1px solid #d4cfc9;
+    outline: none;
+    color: #2c2825;
+    font-size: 15px;
+    font-family: 'Jost', sans-serif;
+    border-radius: 4px;
+    /* CSS3: transition */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+label {
+    position: absolute;
+    left: 14px;
+    top: 13px;
+    color: #8a837b;
+    pointer-events: none;
     transition: 0.3s;
+    background-color: #faf9f7;
+    padding: 0 4px;
+    font-size: 14px;
+    font-family: 'Jost', sans-serif;
 }
 
-.btn-blue:hover{
-    background-color: #0ea5e9;
+/* CSS3: pseudoclass :focus */
+input:focus {
+    border-color: #c18b53;
+    box-shadow: 0 0 0 3px rgba(193, 139, 83, 0.15);
+    background-color: #ffffff;
+}
+
+input:focus + label,
+input:valid + label {
+    top: -8px;
+    font-size: 11px;
+    color: #c18b53;
+    background-color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* BUTONI LOGIN */
+.btn-blue {
+    width: 100%;
+    background-color: #1c1a18;
+    color: #ffffff;
+    border: none;
+    margin-top: 10px;
+    padding: 13px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-family: 'Jost', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* CSS3: pseudoclass :hover */
+.btn-blue:hover {
+    background-color: #36322f;
+    box-shadow: 0 8px 20px rgba(28, 26, 24, 0.2);
+}
+
+/* LINKU PER REGJISTRIM */
+.login-box p {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #8a837b;
+}
+
+.login-box p a {
+    color: #c18b53;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.login-box p a:hover {
+    color: #a67840;
+    text-decoration: underline;
+}
+
+/* RESPONSIVE — Mobile */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px 20px;
+        margin: 20px;
+    }
 }

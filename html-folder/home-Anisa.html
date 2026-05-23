@@ -30,7 +30,8 @@
         </div>
 
         <nav class="header-actions">
-            <a href="../html-folder/profile-Alisa.html">Profili</a>
+            <a href="login-Dior.html">Hyr</a>
+            <a href="register-Ola.html">Regjistrohu</a>
             <a href="cart-Diori.html">Shporta</a>
         </nav>
 
@@ -60,7 +61,7 @@
         <section class="hero">
             <div class="container clearfix">
                 <div class="hero-tekst">
-                    <p class="hero-nentitulli">Koleksioni i Ri 2025</p>
+                    <p class="hero-nentitulli">Koleksioni i Ri 2026</p>
                     <h1>Elegancë në<br />çdo detaj</h1>
                     <p class="hero-pershkrim">Produkte të zgjedhura me kujdes për njerëzit që vlerësojnë cilësinë dhe stilin.</p>
                     <div class="hero-butonat">
@@ -132,6 +133,30 @@
                         <p>Ekipi ynë është gjithmonë këtu për të të ndihmuar.</p>
                     </div>
 
+                </div>
+            </div>
+        </section>
+
+        <!-- GRAFIKU I SHITJEVE — Chart.js -->
+        <section class="grafiku-shitjeve">
+            <div class="container">
+                <h2>Produktet Tona në Shifra</h2>
+                <p class="seksion-pershkrim">Shpërndarja e shitjeve sipas kategorisë</p>
+
+                <div class="grafiku-wrapper clearfix">
+                    <div class="grafiku-kuti">
+                        <canvas id="grafikuShitjeve"></canvas>
+                    </div>
+                    <div class="grafiku-info">
+                        <h3>Kategoritë më të shitura</h3>
+                        <ul class="legjenda-lista">
+                            <li><span class="ngjyra-pike" style="background:#1c1a18"></span> Modë — 38%</li>
+                            <li><span class="ngjyra-pike" style="background:#c18b53"></span> Aksesorë — 27%</li>
+                            <li><span class="ngjyra-pike" style="background:#8a837b"></span> Kozmetikë — 20%</li>
+                            <li><span class="ngjyra-pike" style="background:#d4cfc9"></span> Shtëpi & Dekor — 15%</li>
+                        </ul>
+                        <p class="grafiku-shenime">Të dhëna bazuar në shitjet e muajit të fundit.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -208,5 +233,7 @@
     </div>
   </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+    <script src="../js-folder/grafiku.js"></script>
 </body>
 </html>

@@ -1,8 +1,8 @@
 /* home.css — Stilet për faqen Home */
 
-/* 
+/* ============================================================
    HERO BANNER
- */
+   ============================================================ */
 .hero {
     background-color: #ffffff;
     padding: 80px 0;
@@ -71,27 +71,25 @@
 }
 
 /* Foto e heroes — float djathtas */
-/* PAS: */
 .hero-foto {
     float: right;
     width: 47%;
-    display: flex;
-    align-items: flex-start;
-    margin-top: 50px;
 }
 
 .hero-foto img {
     width: 100%;
-    height: auto;
-    object-fit: contain;
+    height: 500px;
+    object-fit: cover;
+    /* CSS3: rounded corners */
     border-radius: 4px;
-    background-color: transparent;
-    box-shadow: none;
+    background-color: #e8e4df;
+    /* CSS3: box-shadow */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* 
+/* ============================================================
    TITUJT E SEKSIONEVE
-    */
+   ============================================================ */
 .seksion-pershkrim {
     text-align: center;
     color: #8a837b;
@@ -122,9 +120,9 @@
     margin: 12px auto 20px auto;
 }
 
-/* 
+/* ============================================================
    WIDGET I MOTIT
-   */
+   ============================================================ */
 .widget-moti {
     background-color: #ffffff;
     padding: 25px 0;
@@ -209,9 +207,9 @@
     }
 }
 
-/* 
+/* ============================================================
    BANNER OFERTE
-   */
+   ============================================================ */
 .banner-oferte {
     /* CSS3: gradient */
     background: linear-gradient(135deg, #1c1a18 0%, #2b2522 100%);
@@ -239,9 +237,9 @@
     margin-bottom: 30px;
 }
 
-/*
+/* ============================================================
    PERSE NE
-   */
+   ============================================================ */
 .perse-ne {
     padding: 80px 0;
     background-color: #f8f7f4;
@@ -269,6 +267,96 @@
     font-size: 14px;
     color: #8a837b;
     line-height: 1.8;
+}
+
+/* ============================================================
+   GRAFIKU I SHITJEVE — Chart.js
+   ============================================================ */
+.grafiku-shitjeve {
+    padding: 80px 0;
+    background-color: #f8f7f4;
+}
+
+.grafiku-shitjeve h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.grafiku-shitjeve h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #c18b53;
+    margin: 12px auto 20px auto;
+}
+
+.grafiku-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+/* Kutia e canvas */
+.grafiku-kuti {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Informacioni anësor */
+.grafiku-info {
+    flex: 1;
+}
+
+.grafiku-info h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Lista e legjendës */
+.legjenda-lista {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.legjenda-lista li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: #2c2825;
+    margin-bottom: 14px;
+    font-weight: 500;
+}
+
+/* Pika e ngjyrës */
+.ngjyra-pike {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.grafiku-shenime {
+    font-size: 13px;
+    color: #8a837b;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .grafiku-wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .grafiku-kuti {
+        width: 100%;
+    }
 }
 
 /* ============================================================
@@ -322,9 +410,9 @@
     letter-spacing: 1px;
 }
 
-/* 
+/* ============================================================
    RESPONSIVE — Tablet
-   */
+   ============================================================ */
 @media (max-width: 1024px) {
     .perse-grid > .perse-item {
         width: 50%;
@@ -341,9 +429,9 @@
     }
 }
 
-/* 
+/* ============================================================
    RESPONSIVE — Mobile
-    */
+   ============================================================ */
 @media (max-width: 768px) {
     .hero-tekst,
     .hero-foto {
@@ -379,4 +467,3 @@
         font-size: 36px;
     }
 }
-
