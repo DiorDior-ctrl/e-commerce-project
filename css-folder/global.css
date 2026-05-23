@@ -21,7 +21,7 @@ html {
 
 body {
   font-family: 'Jost', sans-serif;
-  background-color: #f8f7f4; /* Ngjyra e sfondit globale */
+  background-color: #f8f7f4;
   color: #2c2825;
   line-height: 1.7;
 }
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color 0.3s ease; /* Lejuar nga CSS-4: Transitions */
+  transition: color 0.3s ease;
 }
 
 /* ============================================================
@@ -61,7 +61,7 @@ a {
 .btn {
   display: inline-block;
   padding: 12px 28px;
-  border-radius: 30px; /* CSS-4: Rounded Corners */
+  border-radius: 30px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 1px;
@@ -79,7 +79,7 @@ a {
 
 .btn-primary:hover {
   background-color: #36322f;
-  box-shadow: 0 8px 20px rgba(28, 26, 24, 0.2); /* CSS-4: Box Shadow */
+  box-shadow: 0 8px 20px rgba(28, 26, 24, 0.2);
 }
 
 .btn-sm {
@@ -151,7 +151,7 @@ a {
 .header-search button {
   width: 20%;
   float: right;
-  padding: 12px ;
+  padding: 12px;
   background-color: #f1f1f1dc;
   border: 1px solid #00000082;
   border-left: none;
@@ -183,11 +183,11 @@ a {
 
 /* Navigimi */
 .site-nav {
-  clear: both; /* Pastron float-et e mësipërme */
+  clear: both;
   border-top: 1px solid #f2efeb;
   text-align: center;
   padding: 11px 0;
-background-color: #2b2522;
+  background-color: #2b2522;
 }
 
 .site-nav ul {
@@ -205,46 +205,47 @@ background-color: #2b2522;
   letter-spacing: 1.5px;
   color: #aca49a;
   font-weight: 500;
-  }
+}
 
 .site-nav ul li a:hover,
 .site-nav ul li a.active {
   color: #ffffff;
 }
+
 .hamburger {
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 4px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
 }
 
 .hamburger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background-color: #1a1a1a;
-    transition: 0.3s ease;
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: #1a1a1a;
+  transition: 0.3s ease;
 }
 
 /* HAMBURGER ANIMACION KUR ESHTE HAPUR */
 .hamburger.open span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+  transform: translateY(7px) rotate(45deg);
 }
 
 .hamburger.open span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 
 .hamburger.open span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+  transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ============================================================
-   PAGE HERO GLOBALE (Për titujt e faqeve si Rreth Nesh, Kontakt etj)
+   PAGE HERO GLOBALE
    ============================================================ */
 .page-hero {
   background-color: #ffffff;
@@ -325,7 +326,7 @@ background-color: #2b2522;
 }
 
 .footer-bottom {
-  clear: both; /* Pastron kolonat e Footer-it */
+  clear: both;
   text-align: center;
   padding-top: 30px;
   margin-top: 40px;
@@ -334,15 +335,6 @@ background-color: #2b2522;
   color: #8a837b;
 }
 
-
-
-
-
-
-
-
-
-
 /* ============================================================
    RESPONSIVE DESIGN (Media Queries)
    ============================================================ */
@@ -350,93 +342,114 @@ background-color: #2b2522;
 /* Për Tablet (Nën 1024px) */
 @media (max-width: 1024px) {
   .footer-col {
-    width: 50%; /* 2 kolona në rresht në Footer */
+    width: 50%;
     margin-bottom: 30px;
   }
 }
 
 /* Për Mobile (Nën 768px) */
 @media (max-width: 768px) {
-  .header-logo, 
-  .header-nav, 
-  .header-actions {
+  .header-logo,
+  .header-nav {
     float: none;
     width: 100%;
     text-align: center;
     padding: 10px 0;
   }
-  
-  .header-nav ul li {
-    margin: 5px 10px;
+
+  /* Fshehim header-actions në mobile — linqet do jenë tek hamburger menu */
+  .header-actions {
+    display: none;
   }
-  
-  .header-actions a {
-    margin: 0 15px;
+
+  /* Logo në mobile — merr më pak hapësirë */
+  .site-logo {
+    float: left;
+    width: auto;
+    font-size: 26px;
   }
-  
+
+  /* Hamburger djathtas */
+  .hamburger {
+    display: flex;
+    float: right;
+    margin-top: 5px;
+  }
+
+  /* Header-main të ketë lartësi fikse */
+  .header-main {
+    padding: 12px 0;
+  }
+
   .page-hero h1 {
     font-size: 32px;
   }
-  
+
   .footer-col {
     float: none;
-    width: 100%; /* 1 kolonë në rresht në Footer */
+    width: 100%;
     padding-right: 0;
     text-align: center;
   }
-      .hamburger {
-        display: flex;
-    }
 
-    .header-search {
-        display: none;
-    }
+  .hamburger {
+    display: flex;
+  }
 
-    .site-nav {
-        display: none;
-        border-top: 1px solid #e8e4df;
-    }
+  .header-search {
+    display: none;
+  }
 
-    .site-nav.open {
-        display: block;
-    }
+  .site-nav {
+    display: none;
+    border-top: 1px solid #e8e4df;
+  }
 
-    .site-nav ul {
-        flex-direction: column;
-        padding: 10px 0;
-    }
+  .site-nav.open {
+    display: block;
+  }
 
-    .site-nav ul li {
-        width: 100%;
-    }
+  .site-nav ul {
+    flex-direction: column;
+    padding: 10px 0;
+  }
 
-    .site-nav ul li a {
-        display: block;
-        padding: 14px 20px;
-        font-size: 15px;
-        border-bottom: 1px solid #f2efeb;
-    }
+  .site-nav ul li {
+    width: 100%;
+  }
 
-    .site-nav ul li:last-child a {
-        border-bottom: none;
-    }
+  .site-nav ul li a {
+    display: block;
+    padding: 14px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #36322f;
+  }
+
+  .site-nav ul li:last-child a {
+    border-bottom: none;
+  }
+
+  /* Linqet e shtuara nga JS në menu mobile */
+  .site-nav ul li.mobile-only a {
+    color: #c18b53;
+  }
 }
-
 
 .toast-notification {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: #673b209c; 
-    color: #fff;
-    padding: 15px 25px;
-    border-radius: 8px;
-    z-index: 9999;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.3s, transform 0.3s;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #673b209c;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 8px;
+  z-index: 9999;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
 }
+
 .toast-notification.show {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }

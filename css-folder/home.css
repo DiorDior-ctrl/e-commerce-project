@@ -444,6 +444,10 @@
         margin-top: 30px;
     }
 
+    .hero-foto img {
+        height: 250px;
+    }
+
     .hero-tekst h1 {
         font-size: 42px;
     }
