@@ -194,27 +194,20 @@
 }
 
 @media (max-width: 768px) {
-  /* Zvogëlojmë padding-un e kontejnerit për celular */
   .product-single-wrapper {
     padding: 20px;
   }
-
   .product-gallery,
   .product-details {
     float: none;
     width: 100%;
   }
-
   .product-gallery {
     margin-bottom: 30px;
   }
-
-  /* Zvogëlojmë pak titullin që të mos zërë gjithë ekranin */
   .product-details h1 {
     font-size: 28px;
   }
-
-  /* Rregullimi i inputit dhe butonit të shportës për t'u bërë 100% të gjerë */
   .add-to-cart-box input[type="number"] {
     float: none;
     display: block;
@@ -222,13 +215,11 @@
     margin-bottom: 15px;
     margin-right: 0;
   }
-
   .add-to-cart-box .btn {
     float: none;
     display: block;
     width: 100%;
   }
-
   .related-card {
     float: none;
     width: 100%;
