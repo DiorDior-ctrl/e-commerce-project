@@ -237,10 +237,11 @@ function validoFormen(event) {
     return;
   }
 
- 
+
   // NESE NUK KA GABIME — shfaqim informacionin me DOM
   // Shtojme elementin e suksesit ne faqe (kerkese nr. 9)
   var fotoInput = document.getElementById("foto-profili");
+  // RREGULLIM: suksesiFoto dhe suksesiInfo merren nga DOM
   var suksesiFoto = document.getElementById("sukses-foto");
   var suksesiInfo = document.getElementById("sukses-info");
 
@@ -254,7 +255,9 @@ function validoFormen(event) {
   }
 
   // Nese ka foto të ngarkuar, e shfaqim me FileReader (W3C File API)
-  if (fotoInput.files.length > 0) {
+  // RREGULLIM: kontrollohet files[0] dhe src vendoset nga FileReader;
+  //            nese nuk ka foto, imazhi fshihet me display:none
+  if (fotoInput.files && fotoInput.files.length > 0) {
     var lexues = new FileReader();
 
     lexues.onload = function(e) {
@@ -264,6 +267,8 @@ function validoFormen(event) {
 
     lexues.readAsDataURL(fotoInput.files[0]);
   } else {
+    // Asnje foto e ngarkuar — fshijme imazhin
+    suksesiFoto.src = "#";
     suksesiFoto.style.display = "none";
   }
 
