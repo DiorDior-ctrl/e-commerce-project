@@ -1,3 +1,5 @@
+// render-checkout.js — Shfaq produktet e shportës në faqen e Checkout
+// Shënim: variabla 'cart' lexohet nga localStorage, e ndarë me cart.js
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const checkoutItems = document.getElementById("checkout-items");
