@@ -1,8 +1,6 @@
 /* home.css — Stilet për faqen Home */
 
-/* ============================================================
-   HERO BANNER
-   ============================================================ */
+/* HERO BANNER */
 .hero {
     background-color: #ffffff;
     padding: 80px 0;
@@ -87,9 +85,7 @@
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
-/* ============================================================
-   TITUJT E SEKSIONEVE
-   ============================================================ */
+/* TITUJT E SEKSIONEVE  */
 .seksion-pershkrim {
     text-align: center;
     color: #8a837b;
@@ -120,9 +116,7 @@
     margin: 12px auto 20px auto;
 }
 
-/* ============================================================
-   WIDGET I MOTIT
-   ============================================================ */
+/* WIDGET I MOTIT */
 .widget-moti {
     background-color: #ffffff;
     padding: 25px 0;
@@ -207,9 +201,7 @@
     }
 }
 
-/* ============================================================
-   BANNER OFERTE
-   ============================================================ */
+/* BANNER OFERTE */
 .banner-oferte {
     /* CSS3: gradient */
     background: linear-gradient(135deg, #1c1a18 0%, #2b2522 100%);
@@ -237,9 +229,7 @@
     margin-bottom: 30px;
 }
 
-/* ============================================================
-   PERSE NE
-   ============================================================ */
+/* PERSE NE */
 .perse-ne {
     padding: 80px 0;
     background-color: #f8f7f4;
@@ -269,9 +259,7 @@
     line-height: 1.8;
 }
 
-/* ============================================================
-   GRAFIKU I SHITJEVE — Chart.js
-   ============================================================ */
+/* GRAFIKU I SHITJEVE — Chart.js*/
 .grafiku-shitjeve {
     padding: 80px 0;
     background-color: #f8f7f4;
@@ -359,9 +347,7 @@
     }
 }
 
-/* ============================================================
-   TESTIMONIALE
-   ============================================================ */
+/* TESTIMONIALE */
 .testimoniale {
     padding: 80px 0;
     background-color: #ffffff;
@@ -410,9 +396,7 @@
     letter-spacing: 1px;
 }
 
-/* ============================================================
-   RESPONSIVE — Tablet
-   ============================================================ */
+/* RESPONSIVE — Tablet  */
 @media (max-width: 1024px) {
     .perse-grid > .perse-item {
         width: 50%;
@@ -429,9 +413,7 @@
     }
 }
 
-/* ============================================================
-   RESPONSIVE — Mobile
-   ============================================================ */
+/* RESPONSIVE — Mobile */
 @media (max-width: 768px) {
     .hero-tekst,
     .hero-foto {
