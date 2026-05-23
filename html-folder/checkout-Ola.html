@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Përfundo porosinë tënde në Luxe Market" />
-  <title>Checkout — Luxe Market</title>
+  <meta name="description" content="Përfundo porosinë tënde në GENZZONE" />
+  <title>Checkout — GENZZONE</title>
 
   <link rel="stylesheet" href="../css-folder/global.css" />
   <link rel="stylesheet" href="../css-folder/checkout.css" />
@@ -71,43 +71,150 @@
       <div class="seksion-box">
         <h2>1. Adresa e Dërgesës</h2>
 
-        <form id="forma-checkout">
+        <form id="forma-checkout" novalidate>
 
-          <div class="grup-fushe">
-            <label>Emri *</label>
-            <input type="text" required />
-          </div>
+            <p class="shenime-kerkuara">Fushat e shënuara me <span class="yll">*</span> janë të detyrueshme</p>
 
-          <div class="grup-fushe">
-            <label>Email *</label>
-            <input type="email" required />
-          </div>
+            <div class="dy-kolona clearfix">
+              <div class="grup-fushe gjysma">
+                <label for="emri">Emri <span class="yll">*</span></label>
+                <input type="text" id="emri" name="emri" placeholder="p.sh. Ola" autocomplete="given-name" autofocus tabindex="1" />
+                <span class="gabim" id="gabim-emri"></span>
+              </div>
+              <div class="grup-fushe gjysma">
+                <label for="mbiemri">Mbiemri <span class="yll">*</span></label>
+                <input type="text" id="mbiemri" name="mbiemri" placeholder="p.sh. Berisha" autocomplete="family-name" tabindex="2" />
+                <span class="gabim" id="gabim-mbiemri"></span>
+              </div>
+            </div>
 
-          <div class="grup-fushe">
-            <label>Adresa *</label>
-            <input type="text" required />
-          </div>
+            <div class="grup-fushe">
+              <label for="email">Email <span class="yll">*</span></label>
+              <input type="email" id="email" name="email" placeholder="shembull@email.com" autocomplete="email" tabindex="3" />
+              <span class="gabim" id="gabim-email"></span>
+            </div>
 
-          <div class="grup-fushe">
-            <label>Qyteti *</label>
-            <input type="text" required />
-          </div>
+            <div class="grup-fushe">
+              <label for="celulari">Numri i Celularit <span class="yll">*</span>
+                <small class="udhezim">(Formati: 069-1234567)</small>
+              </label>
+              <input type="tel" id="celulari" name="celulari" placeholder="069-1234567" autocomplete="tel" tabindex="4" />
+              <span class="gabim" id="gabim-celulari"></span>
+            </div>
 
-          <div class="grup-fushe">
-            <label>Shteti *</label>
-            <select required>
-              <option value="">Zgjidh</option>
-              <option>Shqipëri</option>
-              <option>Kosovë</option>
-            </select>
-          </div>
+            <div class="grup-fushe">
+              <label for="adresa">Adresa <span class="yll">*</span></label>
+              <input type="text" id="adresa" name="adresa" placeholder="Rruga, Numri" autocomplete="street-address" tabindex="5" />
+              <span class="gabim" id="gabim-adresa"></span>
+            </div>
 
-          <button type="submit" class="btn btn-primary">Konfirmo Porosinë</button>
+            <div class="dy-kolona clearfix">
+              <div class="grup-fushe gjysma">
+                <label for="qyteti">Qyteti <span class="yll">*</span></label>
+                <input type="text" id="qyteti" name="qyteti" placeholder="p.sh. Tiranë" autocomplete="address-level2" tabindex="6" />
+                <span class="gabim" id="gabim-qyteti"></span>
+              </div>
+              <div class="grup-fushe gjysma">
+                <label for="kodi-postar">Kodi Postar <span class="yll">*</span></label>
+                <input type="number" id="kodi-postar" name="kodi-postar" placeholder="p.sh. 1001" min="1000" max="9999" tabindex="7" />
+                <span class="gabim" id="gabim-kodi-postar"></span>
+              </div>
+            </div>
+
+            <div class="grup-fushe">
+              <label for="shteti">Shteti <span class="yll">*</span></label>
+              <select id="shteti" name="shteti" tabindex="8">
+                <option value="">-- Zgjidh shtetin --</option>
+                <option value="al">Shqipëri</option>
+                <option value="xk">Kosovë</option>
+                <option value="mk">Maqedoni e Veriut</option>
+                <option value="me">Mali i Zi</option>
+                <option value="other">Tjetër</option>
+              </select>
+              <span class="gabim" id="gabim-shteti"></span>
+            </div>
+
+            <div class="grup-fushe">
+              <label for="data-dergimit">Data e preferuar e dërgimit <span class="yll">*</span></label>
+              <input type="date" id="data-dergimit" name="data-dergimit" tabindex="9" />
+              <span class="gabim" id="gabim-data-dergimit"></span>
+            </div>
+
+            <div class="seksion-box seksion-pagesa">
+              <h2>2. Metoda e Pagesës</h2>
+              <div class="radio-grup">
+                <label class="radio-etikete">
+                  <input type="radio" name="pagesa" value="kartë" tabindex="10" /> Kartë Krediti/Debiti
+                </label>
+                <label class="radio-etikete">
+                  <input type="radio" name="pagesa" value="kesh" tabindex="11" /> Para në Dorë
+                </label>
+                <label class="radio-etikete">
+                  <input type="radio" name="pagesa" value="transfer" tabindex="12" /> Transfer Bankar
+                </label>
+              </div>
+              <span class="gabim" id="gabim-pagesa"></span>
+
+              <div id="detajet-karte" style="display: none;">
+                <div class="grup-fushe">
+                  <label for="nr-karte">Numri i Kartës <span class="yll">*</span>
+                    <small class="udhezim">(Formati: XXXX-XXXX-XXXX-XXXX)</small>
+                  </label>
+                  <input type="text" id="nr-karte" name="nr-karte" placeholder="1234-5678-9012-3456" tabindex="13" />
+                  <span class="gabim" id="gabim-nr-karte"></span>
+                </div>
+                <div class="dy-kolona clearfix">
+                  <div class="grup-fushe gjysma">
+                    <label for="skadenca">Skadenca <span class="yll">*</span></label>
+                    <input type="month" id="skadenca" name="skadenca" tabindex="14" />
+                    <span class="gabim" id="gabim-skadenca"></span>
+                  </div>
+                  <div class="grup-fushe gjysma">
+                    <label for="cvv">CVV <span class="yll">*</span></label>
+                    <input type="number" id="cvv" name="cvv" placeholder="123" min="100" max="999" tabindex="15" />
+                    <span class="gabim" id="gabim-cvv"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="seksion-box">
+              <h2>3. Kupon Zbritjeje</h2>
+              <div class="kupon-grup">
+                <input type="text" id="kupon" name="kupon" placeholder="Shkruaj kodin e kuponit..." tabindex="16" />
+                <button type="button" class="btn btn-primary btn-sm" id="butoni-kupon" tabindex="17">Apliko</button>
+              </div>
+              <span id="mesazh-kupon" class="mesazh-kupon"></span>
+            </div>
+
+            <div class="seksion-box">
+              <h2>4. Ngarko Dokumentin e Pagesës</h2>
+              <p class="pershkrim-seksion">Nëse ke kryer transfer bankar, ngarko këtu konfirmimin e pagesës (PDF ose imazh).</p>
+              <div id="zona-drop" class="zona-drop">
+                <p>Tërhiq dhe lësho skedarin këtu</p>
+                <p class="ose-tekst">— ose —</p>
+                <label for="input-skedar" class="btn btn-primary btn-sm">Zgjidh Skedar</label>
+                <input type="file" id="input-skedar" name="input-skedar" accept=".pdf, image/*" style="display: none;" tabindex="18" />
+              </div>
+              <ul id="lista-skedareve" class="lista-skedareve"></ul>
+            </div>
+
+            <div class="grup-butonat">
+              <button type="submit" class="btn btn-primary" tabindex="19">Konfirmo Porosinë</button>
+              <button type="button" class="btn btn-reset" id="butoni-pastro" tabindex="20">Pastro</button>
+            </div>
+
         </form>
       </div>
     </div>
 
-    <!-- SUMMARY -->
+    <!-- Mesazhi i suksesit pas konfirmimit -->
+        <div id="sukses-mesazhi" class="sukses-box" style="display: none;">
+          <h3>Porosia u konfirmua!</h3>
+          <div id="sukses-info"></div>
+        </div>
+
+        <!-- SUMMARY -->
     <aside class="checkout-permbledhje">
       <div class="seksion-box">
         <h2>Përmbledhja e Porosisë</h2>
@@ -166,6 +273,7 @@
   </footer>
 
 <script src="../js-folder/render-checkout.js"></script>
+<script src="../js-folder/checkout.js"></script>
 
 </body>
 </html>
