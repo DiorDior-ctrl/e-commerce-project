@@ -57,14 +57,7 @@
 
     <main>
 
-        <!-- AUDIO: tingull konfirmimi për navigim -->
-        <!-- HTML5: elementi <audio> me atributet preload dhe controls -->
-        <audio id="audio-konfirmimi" preload="auto">
-            <source src="../audio-folder/click.mp3" type="audio/mpeg">
-            <source src="../audio-folder/click.ogg" type="audio/ogg">
-            Browseri juaj nuk e suporton elementin audio.
-        </audio>
-
+       
         <!-- HERO BANNER -->
         <section class="hero">
             <div class="container clearfix">
@@ -261,19 +254,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
     <script src="../js-folder/grafiku.js"></script>
-    <script>
-        // Audio: luan tingullin kur klikohet butoni kryesor i hero-s
-        var audioButonat = document.querySelectorAll(".hero-butonat .btn-primary");
-        var audioKonfirmimi = document.getElementById("audio-konfirmimi");
-
-        for (var i = 0; i < audioButonat.length; i++) {
-            audioButonat[i].addEventListener("click", function() {
-                if (audioKonfirmimi) {
-                    audioKonfirmimi.currentTime = 0;
-                    audioKonfirmimi.play();
-                }
-            });
-        }
-    </script>
+    
 </body>
 </html>
